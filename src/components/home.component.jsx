@@ -1,0 +1,26 @@
+import { RxDoubleArrowDown } from 'react-icons/rx';
+
+const Home = () => {
+    return(
+    <>
+    <div className="about">
+        <div className="name"><span>.</span>SERENA</div>
+        <div className="bio">
+          <div className="title">Designer / Web Developer</div>
+          <div className="objective">
+            I help small businesses get more reach by creating designs and bringing them to life.
+            <span>Scroll to view my works.</span>
+          </div>
+        </div>
+        <div className="about-hr"></div>
+        <button className="info-btn">Contact Information</button>
+    </div>
+    <div className="arrow-down-btn-container">
+        <div>My Work</div>
+        <button className="see-more-btn"><RxDoubleArrowDown size={40}/></button>
+    </div>
+    </>
+    );
+};
+
+export default Home;

@@ -1,0 +1,142 @@
+@import 'variables.styles';
+
+* {
+    margin: 10px;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+button {
+    cursor: pointer;
+}
+  
+body {
+    height: 100vh;
+    min-height: 100%;
+    background: $backgroundColor;
+}
+  
+.container {
+    padding: 20px;
+    height: 100vh;
+    background: #121212;
+    background-image: url("../../public/images/production ID_4779866.gif");
+    background-repeat: no-repeat;
+    &::after,
+    &::before {
+        content: "";
+        position: absolute;
+        z-index: 500;
+        width: 100px;
+        height: 25px;
+        background: $backgroundColor;
+        transform: translateY(-50%);
+    }
+    &::after {
+        left: 0;
+        top: 80%;
+    }
+    &::before {
+        right: 0;
+        top: 10%;
+    }
+
+    .theme-container {
+        * { display: inline-block; }
+        width: 250px;
+        .theme-icon { vertical-align: middle; }
+        .theme-toggler {
+            text-align: left;
+            margin:0;
+            width: 250px;
+            color: $primaryLight;
+            font-family: $secondaryFont;
+            font-size: 24px;
+            background-color: rgba(0,0,0,0);
+            background-size: 100% 0%;
+            background-repeat: no-repeat;
+            transition: .4s;
+            border: 0;
+            border-top: 1px solid $primaryLight;
+            color: $primaryLight;
+            &:hover {
+                color: $primaryDark;
+                background-image: linear-gradient($primaryLight, $primaryLight);
+                background-size: 100% 100%;
+            }
+        }
+    }
+
+    .about {
+        * { letter-spacing: 2px; }
+        .name {
+            span { color: $secondaryLight; }
+            color: $primaryLight;
+            font-family: $primaryFont;
+            font-size: 64px;
+            font-weight: bold;
+        }
+
+        .bio {
+            font-family: $secondaryFont;
+            color: $primaryLight;
+            width: 50%;
+            .title {  
+                font-size: 36px;
+                font-weight: bold;
+            }
+            .objective {
+                font-size: 24px;
+                word-break: break-word;
+                span { 
+                    display: block;
+                    margin: 55px 0 55px; 
+                }
+            }
+        }
+
+        .about-hr {
+            width: 45%;
+            border-bottom: 1px solid $primaryLight;
+        }
+
+        .info-btn {
+            font-family: $secondaryFont;
+            font-size: 20px;
+            border: 1px solid white;
+            background: rgba(0,0,0,0);
+            background-size: 0 100%;
+            background-repeat: no-repeat;
+            transition: .4s;
+            color: $primaryLight;
+            padding: 15px;
+            &:hover {
+                background-image: linear-gradient($primaryLight,$primaryLight);
+                background-size: 100% 100%;
+                color: $primaryDark;
+            }
+        }
+    }
+    .arrow-down-btn-container {
+        position: fixed;
+        left: 50%;
+        bottom: 0;
+        transform: translateX(-50%);
+        font-family: $secondaryFont;  
+        color: $primaryLight;
+        margin: 0;
+        .see-more-btn {
+            animation: bounce 1.5s ease infinite;
+            animation-fill-mode: both;
+            background: rgba(0,0,0,0);
+            border: 0;
+            color: $primaryLight;
+        }
+    }
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {transform: translateY(0);} 
+    40% {transform: translateY(-30px);} 
+    60% {transform: translateY(-15px);} 
+ } 
