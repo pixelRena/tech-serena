@@ -1,7 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital@0;1&family=Montserrat:wght@300;700&family=VT323&display=swap');
 
-//  Light Mode
-$backgroundColor: #ffffff;
 $primaryLight: #FFFFFF;
 $primaryDark: #000000;
 $secondaryLight: #7342FF;
@@ -9,3 +7,40 @@ $secondaryLight: #7342FF;
 $primaryFont: 'Montserrat', sans-serif;
 $secondaryFont: 'Courier Prime', monospace;
 $footerFont: 'VT323', monospace;
+
+$themes: (
+  light: (
+    backgroundColor: #fff,
+    primaryLight: $primaryLight,
+    primaryDark: $primaryDark,
+  ),
+  dark: (
+    backgroundColor: #0F0F0F,
+    primaryLight: $primaryDark,
+    primaryDark: $primaryLight
+  ),
+);
+
+
+@mixin themed() {
+  @each $theme, $map in $themes {
+    .theme-#{$theme} & {
+      $theme-map: () !global;
+      @each $key, $submap in $map {
+        $value: map-get(map-get($themes, $theme), '#{$key}');
+        $theme-map: map-merge(
+          $theme-map,
+            (
+              $key: $value,
+            )
+          ) !global;
+        }
+      @content;
+      $theme-map: null !global;
+    }
+  }
+}
+
+@function t($key) {
+  @return map-get($theme-map, $key);
+}

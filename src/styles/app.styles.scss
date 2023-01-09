@@ -12,16 +12,17 @@ button {
   
 body {
     height: 100vh;
-    min-height: 100%;
-    background: $backgroundColor;    
+    min-height: 100%; 
+    @include themed() { background: t('backgroundColor'); }
     &::after,
     &::before {
+        @include themed() { background-color: t('backgroundColor'); }
         content: "";
         position: absolute;
         z-index: 500;
         width: 100px;
-        height: 25px;
-        background: $backgroundColor;
+        height: 25px;  
+        
         transform: translateY(-50%);
     }
     &::after {
@@ -37,7 +38,6 @@ body {
 .container {
     padding: 20px;
     height: 100vh;
-    background: #121212;
     background-image: url("../../public/images/production ID_4779866.gif");
     background-repeat: no-repeat;
 
@@ -48,8 +48,11 @@ body {
         .theme-toggler {
             text-align: left;
             margin:0;
-            width: 250px;
-            color: $primaryLight;
+            width: 250px;   
+            @include themed() { 
+                color: t('backgroundColor'); 
+                border-top: 1px solid t('primaryLight');
+            }
             font-family: $secondaryFont;
             font-size: 24px;
             background-color: rgba(0,0,0,0);
@@ -57,11 +60,11 @@ body {
             background-repeat: no-repeat;
             transition: .4s;
             border: 0;
-            border-top: 1px solid $primaryLight;
-            color: $primaryLight;
             &:hover {
-                color: $primaryDark;
-                background-image: linear-gradient($primaryLight, $primaryLight);
+                @include themed() {  
+                    color: t('primaryDark');
+                    background-image: linear-gradient(t('primaryLight'), t('primaryLight')); 
+                }
                 background-size: 100% 100%;
             }
         }
@@ -71,6 +74,7 @@ body {
         * { letter-spacing: 2px; }
         .name {
             span { color: $secondaryLight; }
+            @include themed() { color: t('primaryLight'); }
             color: $primaryLight;
             font-family: $primaryFont;
             font-size: 64px;
@@ -79,7 +83,7 @@ body {
 
         .bio {
             font-family: $secondaryFont;
-            color: $primaryLight;
+            @include themed() { color: t('primaryLight'); }
             width: 50%;
             .title {  
                 font-size: 36px;
@@ -97,23 +101,27 @@ body {
 
         .about-hr {
             width: 45%;
-            border-bottom: 1px solid $primaryLight;
+            @include themed() { border-bottom: 1px solid t('primaryLight'); }
         }
 
         .info-btn {
             font-family: $secondaryFont;
             font-size: 20px;
-            border: 1px solid white;
+            @include themed() { 
+                border: 1px solid t('primaryLight'); 
+                color: t('primaryLight');
+            }
             background: rgba(0,0,0,0);
             background-size: 0 100%;
             background-repeat: no-repeat;
             transition: .4s;
-            color: $primaryLight;
             padding: 15px;
             &:hover {
-                background-image: linear-gradient($primaryLight,$primaryLight);
-                background-size: 100% 100%;
-                color: $primaryDark;
+                background-size: 100% 100%;  
+                @include themed() { 
+                    background-image: linear-gradient(t('primaryLight'),t('primaryLight'));
+                    color: t('primaryDark'); 
+                }
             }
         }
     }
@@ -123,14 +131,14 @@ body {
         bottom: 0;
         transform: translateX(-50%);
         font-family: $secondaryFont;  
-        color: $primaryLight;
         margin: 0;
+        @include themed() { color: t('primaryLight'); }
         .see-more-btn {
             animation: bounce 1.5s ease infinite;
             animation-fill-mode: both;
             background: rgba(0,0,0,0);
             border: 0;
-            color: $primaryLight;
+            @include themed() { color: t('primaryLight'); }
         }
     }
 }
@@ -153,8 +161,13 @@ body {
    .container {
         text-align: center;
         .about {
-            .about-hr { border: 0; }
+            .about-hr { border: 0 !important; }
             .bio { width: unset; }
+        }
+
+        .theme-container { 
+            width: 100%; 
+            .theme-toggler { text-align: center; } 
         }
 
         .arrow-down-btn-container { 
