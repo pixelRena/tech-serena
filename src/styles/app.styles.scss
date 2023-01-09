@@ -36,10 +36,23 @@ body {
 }
   
 .container {
+    position: relative;
     padding: 20px;
     height: 100vh;
     background-image: url("../../public/images/production ID_4779866.gif");
     background-repeat: no-repeat;
+
+    &::before {
+        content: "COPYRIGHT 2023";
+        font-family: $secondaryFont;
+        @include themed() { color: t('primaryDark'); }
+        rotate: 90deg;
+        position: absolute;
+        overflow: hidden;
+        right: -75px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
 
     .theme-container {
         * { display: inline-block; }
