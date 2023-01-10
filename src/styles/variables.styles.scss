@@ -11,13 +11,17 @@ $footerFont: 'VT323', monospace;
 $themes: (
   light: (
     backgroundColor: #fff,
+    overlayColor: #000,
     primaryLight: $primaryLight,
     primaryDark: $primaryDark,
+    buttonColor: $secondaryLight,
   ),
   dark: (
     backgroundColor: #0F0F0F,
+    overlayColor: none,
     primaryLight: $primaryDark,
-    primaryDark: $primaryLight
+    primaryDark: $primaryLight,
+    buttonColor: $secondaryLight,
   ),
 );
 

@@ -6,7 +6,7 @@ const Home = () => {
     <div className="about">
         <div className="name"><span>.</span>SERENA</div>
         <div className="bio">
-          <div className="title">Designer / Web Developer</div>
+          <div className="title"><span>Design</span>er <span>/</span> <span>Web</span> Developer</div>
           <div className="objective">
             I help small businesses get more reach by creating designs and bringing them to life.
             <span>Scroll to view my works.</span>
