@@ -13,8 +13,7 @@ const Home = () => {
           </div>
         </div>
         <div className="about-hr"></div>
-        <button className="info-btn">Contact Information</button>
-    </div>
+    </div> 
     <div className="arrow-down-btn-container">
         <div>My Work</div>
         <button className="see-more-btn"><RxDoubleArrowDown size={40}/></button>

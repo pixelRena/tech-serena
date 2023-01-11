@@ -45,7 +45,7 @@ const projects = {
         {
             "id": 4,
             "title": "SPACE TOURISM",
-            "type": "Personal",
+            "type": "Challenege",
             "client": "",
             "tools": "HTML, Sass, JavaScript",
             "images": {

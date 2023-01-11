@@ -17,7 +17,7 @@ const SubContainer = () => {
             <div className="projects">
             { data.map(({type,client,tools,id,images}) => {
               return(
-              <label className="swiper-item" for={`p-${id}`} style={{"backgroundImage": `url(${images.coverpng})`}}>
+              <label className="swiper-item" key={id} htmlFor={`p-${id}`} style={{"backgroundImage": `url(${images.coverpng})`}}>
                 <div className="project-information">
                   <div className="project-type"><span>Type:</span> {type}</div>
                   { client && <div className="project-client"><span>Client:</span> {client}</div>}

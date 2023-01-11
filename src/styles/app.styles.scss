@@ -8,7 +8,7 @@
 
 a {
     text-decoration: none;
-    @include themed() { color: t('primaryDark'); }
+    @include themed() { color: t('primaryLight'); }
     &:hover {
         color: $secondaryLight;
         text-decoration: underline;
@@ -40,9 +40,8 @@ button {
     cursor: pointer;
 }
   
-body {
-    height: 100vh;
-    min-height: 100%; 
+body { 
+    overflow-y: hidden;
     @include themed() { background: t('backgroundColor'); }
     &::after,
     &::before {
@@ -68,9 +67,23 @@ body {
 .container {
     position: relative;
     padding: 20px;
-    height: 100vh;
+    height: 95vh;
     background-image: url("../../public/images/production ID_4779866.gif");
     background-repeat: no-repeat;
+
+    .back-to-top-btn {
+        position: absolute;
+        right: 0;
+        bottom: 5px;
+        background: rgba(0,0,0,0);
+        @include themed() { color: t('primaryDark'); }
+        @include themed() { border: 1px solid t('primaryDark'); }
+        border-radius: 20px 0 0 0;
+        &:hover {
+            background: $primaryLight;
+            @include themed() { color: t('primaryLight'); }
+        }
+    }
 
     .overlay {
         z-index: 1;
@@ -83,42 +96,26 @@ body {
         height: 100%;
     }
 
-    // .scroll-container {
-    //     z-index: 2;
-    //     position: absolute;
-    //     height: 80vh;
-    //     width: 100%;
-    //     left: 0;
-    //     top: 25%;
-    //     overflow-x: hidden;
-    //     .box {
-    //         padding: 50px;
-    //         position: fixed;
-    //         z-index: 3;
-    //         width: 100%;
-    //         height: 100vh;
-    //         bottom: -100%;
-    //         left: 0;
-    //         color: white;
-    //         background-color: black;
-    //         overflow: auto;
-    //     }
-    // }
-
     .scroll-container {
-        margin: 5px 0;
+        margin: 0;
         position: absolute;
-        padding: 20px;
-        overflow: hidden;
-        top: 100%;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 100%;
         height: 80vh;
-        @include themed() { background-color: t('primaryLight'); }
-        @include themed() { border: 1px solid t('primaryDark'); }
-        border-radius: 30px 0 0 0;
+        width: 100%;
+        z-index: 70;
+        left: 0;
+        top: 25%;
+        overflow-x: hidden;
+        &::-webkit-scrollbar { width: 0; }
         .subcontainer {
+            margin: 0;
+            position: relative;
+            width: 100%;
+            height: 80vh;
+            bottom: -100%;
+            left: 0;
+            overflow-x: hidden;
+            backdrop-filter: blur(40.7742px);
+            background-color: rgba(118, 118, 118, 0.3);
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -126,7 +123,7 @@ body {
                 font-family: $primaryFont;
                 font-size: 40px;
                 font-weight: bold;
-                @include themed() { color: t('primaryDark'); }
+                @include themed() { color: t('primaryLight'); }
                 span { 
                     font-size: 24px;
                     color: $secondaryLight; 
@@ -197,7 +194,7 @@ body {
                             background-color: rgba(0,0,0,0.6);
                             margin: 0;
                             width: 100%;
-                            height: inherit;
+                            height: 378px;
                             font-family: $secondaryFont;
                             font-size: 22px;
                             &:hover {
@@ -231,7 +228,6 @@ body {
             }
         }
     }
-
 
     #overlay ~ * :not(.arrow-down-btn-container),
     .theme-container {
@@ -285,8 +281,8 @@ body {
 
     .about {
         top: 0;
-        position: sticky;
-        z-index: 3;
+        position: relative;
+        z-index: 55;
         * { letter-spacing: 2px; }
         .name {
             span { color: $secondaryLight; }
@@ -324,28 +320,32 @@ body {
             width: 45%;
             @include themed() { border-bottom: 1px solid t('primaryLight'); }
         }
-
-        .info-btn {
-            font-family: $secondaryFont;
-            font-size: 20px;
+    }
+    
+    .info-btn {
+        margin: 0 30px;
+        position: fixed;
+        font-family: $secondaryFont;
+        bottom: 30%;
+        font-size: 20px;
+        @include themed() { 
+            border: 1px solid t('primaryLight'); 
+            color: t('primaryLight');
+        }
+        background: rgba(0,0,0,0);
+        background-size: 0 100%;
+        background-repeat: no-repeat;
+        transition: .4s;
+        padding: 15px;
+        &:hover {
+            background-size: 100% 100%;  
             @include themed() { 
-                border: 1px solid t('primaryLight'); 
-                color: t('primaryLight');
-            }
-            background: rgba(0,0,0,0);
-            background-size: 0 100%;
-            background-repeat: no-repeat;
-            transition: .4s;
-            padding: 15px;
-            &:hover {
-                background-size: 100% 100%;  
-                @include themed() { 
-                    background-image: linear-gradient(t('primaryLight'),t('primaryLight'));
-                    color: t('primaryDark'); 
-                }
+                background-image: linear-gradient(t('primaryLight'),t('primaryLight'));
+                color: t('primaryDark'); 
             }
         }
     }
+
     .arrow-down-btn-container {
         position: absolute;
         z-index: 2;
