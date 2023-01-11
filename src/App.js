@@ -7,13 +7,18 @@ import SubContainer from "./components/subcontainer.component";
 
 function App() {
   const [ showContainer, setShowContainer ] = useState("projects");
+  const [ count, setCount ] = useState(1);
   const containerWindow = useRef();
 
   const scrollUp = () => { containerWindow.current.scrollTo({top: 0, behavior: "smooth"}); }
 
   useEffect(() => {
-    const offsetBottom = containerWindow.current.offsetTop + containerWindow.current.offsetHeight;
-    containerWindow.current.scrollTo({top: offsetBottom, behavior: "smooth"})
+    if(count === 1) {
+      setCount(2);
+    } else {
+      const offsetBottom = containerWindow.current.offsetTop + containerWindow.current.offsetHeight;
+      containerWindow.current.scrollTo({top: offsetBottom, behavior: "smooth"})
+    }
   },[showContainer]);
 
   return (
