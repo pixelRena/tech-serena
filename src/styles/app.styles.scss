@@ -6,6 +6,36 @@
     box-sizing: border-box;
 }
 
+a {
+    text-decoration: none;
+    @include themed() { color: t('primaryDark'); }
+    &:hover {
+        color: $secondaryLight;
+        text-decoration: underline;
+    }
+}
+
+::-webkit-scrollbar {
+    width: 7px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 1px black; 
+    background: rgba(0,0,0,0); 
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    border-radius: 100px;
+    @include themed() { background: t('primaryDark'); }
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #7342FF;
+}
+
 button {
     cursor: pointer;
 }
@@ -42,21 +72,171 @@ body {
     background-image: url("../../public/images/production ID_4779866.gif");
     background-repeat: no-repeat;
 
-    #overlay {
+    .overlay {
         z-index: 1;
         margin: 0;
         position: absolute;
         top: 0;
         left: 0;
-        @include themed() { background-color: t('overlayColor'); }
         opacity: 0.3;
         width: 100%;
         height: 100%;
     }
 
-    #overlay ~ * :not(.arrow-down-btn-container) {
+    // .scroll-container {
+    //     z-index: 2;
+    //     position: absolute;
+    //     height: 80vh;
+    //     width: 100%;
+    //     left: 0;
+    //     top: 25%;
+    //     overflow-x: hidden;
+    //     .box {
+    //         padding: 50px;
+    //         position: fixed;
+    //         z-index: 3;
+    //         width: 100%;
+    //         height: 100vh;
+    //         bottom: -100%;
+    //         left: 0;
+    //         color: white;
+    //         background-color: black;
+    //         overflow: auto;
+    //     }
+    // }
+
+    .scroll-container {
+        margin: 5px 0;
+        position: absolute;
+        padding: 20px;
+        overflow: hidden;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        height: 80vh;
+        @include themed() { background-color: t('primaryLight'); }
+        @include themed() { border: 1px solid t('primaryDark'); }
+        border-radius: 30px 0 0 0;
+        .subcontainer {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .project-title {
+                font-family: $primaryFont;
+                font-size: 40px;
+                font-weight: bold;
+                @include themed() { color: t('primaryDark'); }
+                span { 
+                    font-size: 24px;
+                    color: $secondaryLight; 
+                }
+            }
+            .project-url {
+                font-family: $secondaryFont;
+                margin: 0;
+                font-size: 24px;
+                &:last-child { font-size: 20px; }
+                .external-icon { 
+                    vertical-align: middle;
+                    color: $secondaryLight; 
+                }
+            }
+            .swiper-container {
+                width: 100%;
+                input { display: none; }
+        
+                /* after checked */
+                #p-1:checked ~ .projects label[for="p-2"],
+                #p-2:checked ~ .projects label[for="p-3"],
+                #p-3:checked ~ .projects label[for="p-4"],
+                #p-4:checked ~ .projects label[for="p-1"] {
+                    cursor: pointer;
+                    transform: translate3d(300px, 0, -90px) rotateY(-15deg) scale(0.8);
+                    z-index: 10;
+                }
+        
+                /* before checked */
+                #p-1:checked ~ .projects label[for="p-4"],
+                #p-2:checked ~ .projects label[for="p-1"],
+                #p-3:checked ~ .projects label[for="p-2"],
+                #p-4:checked ~ .projects label[for="p-3"]{
+                    cursor: pointer;
+                    transform: translate3d(-300px, 0, -90px) rotateY(15deg) scale(0.8);
+                    z-index: 10;
+                }
+
+                #p-1:checked ~ .projects label[for="p-1"],
+                #p-2:checked ~ .projects label[for="p-2"],
+                #p-3:checked ~ .projects label[for="p-3"],
+                #p-4:checked ~ .projects label[for="p-4"] {
+                    background-color: rgba(40, 40, 40, 1);
+                    z-index: 13;
+                }
+        
+                .projects {
+                    position: relative;
+                    display: flex;
+                    justify-content: center;
+                    min-height: 380px;
+                    align-items: center;
+        
+                    .swiper-item {
+                        position: absolute;
+                        font-size: 60px;
+                        transition: transform 0.4s;
+                        background-color: rgba(40, 40, 40, 0.5);
+                        background-size: cover;
+                        border: 1px solid $secondaryLight;
+                        width: 650px;
+                        height: 380px;
+                        color: white;
+                        text-align: center;
+                        .project-information {
+                            position: relative;
+                            background-color: rgba(0,0,0,0.6);
+                            margin: 0;
+                            width: 100%;
+                            height: inherit;
+                            font-family: $secondaryFont;
+                            font-size: 22px;
+                            &:hover {
+                                transition: .4s;
+                                opacity: 0;
+                            }
+                            .project-type,
+                            .project-client,
+                            .project-tools { position: absolute; }
+                            span { 
+                                color: $secondaryLight;
+                                font-style: italic;
+                            }
+                            .project-type,
+                            .project-client {
+                                top: 5px;
+                            }
+                            .project-type {
+                                left: 0;
+                            }
+                            .project-client { right: 5px; }
+                            .project-tools { 
+                                left: 50%;
+                                transform: translateX(-50%);
+                                width: 65%;
+                                bottom: 5px; 
+                            }
+                        }
+                    }
+                } 
+            }
+        }
+    }
+
+
+    #overlay ~ * :not(.arrow-down-btn-container),
+    .theme-container {
         position: relative;
-        z-index: 2;
+        z-index: 3;
     }
 
     &::before {
@@ -104,6 +284,9 @@ body {
     }
 
     .about {
+        top: 0;
+        position: sticky;
+        z-index: 3;
         * { letter-spacing: 2px; }
         .name {
             span { color: $secondaryLight; }

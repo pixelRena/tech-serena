@@ -1,6 +1,6 @@
 const Overlay = () => {
     return(
-        <div id="overlay"></div>
+        <div className="overlay"></div>
     );
 }
 
