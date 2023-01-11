@@ -22,8 +22,8 @@ const projects = {
             "tools": "React, Bootstrap, MongoDB, Express.js, StripeAPI",
             "images": {
                 "gif": "",
-                "coverpng": "https://res.cloudinary.com/dyqefy6t8/image/upload/v1665823921/ubsizpsqpqkyymxa23r6.jpg",
-                "cover2png": "https://devserena.herokuapp.com/images/expertece2.png"
+                "cover2png": "https://res.cloudinary.com/dyqefy6t8/image/upload/v1665823921/ubsizpsqpqkyymxa23r6.jpg",
+                "coverpng": "https://devserena.herokuapp.com/images/expertece2.png"
             },
             "websiteurl": "http://expertece-prototype.herokuapp.com/",
             "githuburl": "https://github.com/pixelRena/expertece-prototype"
@@ -45,7 +45,7 @@ const projects = {
         {
             "id": 4,
             "title": "SPACE TOURISM",
-            "type": "Challenege",
+            "type": "Challenge",
             "client": "",
             "tools": "HTML, Sass, JavaScript",
             "images": {
