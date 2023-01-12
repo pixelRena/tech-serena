@@ -1,4 +1,3 @@
-import { useState } from "react";
 import projects from "../utils/projects.utils";
 import {VscLinkExternal} from 'react-icons/vsc';
 import {BsArrowLeftCircle,BsArrowRightCircle} from 'react-icons/bs';

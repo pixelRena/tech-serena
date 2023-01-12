@@ -440,9 +440,7 @@ body {
             margin: 0 77px;
         }
         .back-to-top-btn {
-            top: 40px;
-            left: 50%;
-            transform: translateX(-50%);
+            display: none;
         }
         .info-btn { 
             width: 100%;
