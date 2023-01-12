@@ -1,5 +1,5 @@
 import {VscLinkExternal} from 'react-icons/vsc';
-import { useRef, useEffect } from "react";
+import { useRef } from "react";
 
 const Info = () => {
     const linkedinEl = useRef();
