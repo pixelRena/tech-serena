@@ -11,7 +11,7 @@ const projects = {
                 "coverpng": "https://devserena.herokuapp.com/images/recommend1.png",
                 "cover2png": "https://devserena.herokuapp.com/images/recommend2.png"
             },
-            "websiteurl": "http://serenuy-games.herokuapp.com/",
+            "websiteurl": "https://snuy-ttv-games.herokuapp.com/",
             "githuburl": "https://github.com/pixelRena/games-recommendations"
         },
         {
