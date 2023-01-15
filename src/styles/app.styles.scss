@@ -15,6 +15,8 @@ a {
     }
 }
 
+.hidden-desktop { display: none; }
+
 ::-webkit-scrollbar { width: 7px; }
 
 /* Track */
@@ -433,6 +435,8 @@ body {
     }
    }
 
+   .hidden-desktop { display: unset }
+
    .container {
     * { margin: 5px 0;}
         &::before { display: none; }
@@ -466,6 +470,8 @@ body {
 
         .scroll-container {
             .subcontainer {
+                .hidden-mobile { display: none; }
+                .project-title { text-align: center; }
                 .contact-container {
                     width: 100%;
                     flex-wrap: nowrap;
@@ -493,9 +499,9 @@ body {
                         transform: unset;
                     }
                     .projects {
-                        flex-wrap: wrap;
-                        align-content: center;
+                        justify-content: start;
                         min-height: 500px;
+                        overflow: auto;
                         .arrow-left,
                         .arrow-right {
                             visibility: visible;
@@ -503,11 +509,20 @@ body {
                             width: 100%;
                             z-index: 50;
                         }
-                        .arrow-left { text-align: left; }
-                        .arrow-right {  text-align: right; }
+                        .links { 
+                            position: relative;
+                            width: 100%;
+                            transform: translateX(-50%);
+                            left: 50%;
+                            bottom: 0;
+                            text-align: center; 
+                        }
                         .swiper-item {   
+                            position: relative;
                             background-position: center;
-                            width: 337px;
+                            width: 390px;
+                            height: 300px;
+                            margin: 0 5px 30px;
                             .project-information {
                                 background-color: rgba(0,0,0,0.2);
                                 .project-type,
