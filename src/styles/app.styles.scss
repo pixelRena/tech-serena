@@ -54,7 +54,6 @@ body {
         z-index: 500;
         width: 100px;
         height: 25px;  
-        
         transform: translateY(-50%);
     }
     &::after {
@@ -475,7 +474,10 @@ body {
         .scroll-container {
             .subcontainer {
                 .hidden-mobile { display: none; }
-                .project-title { text-align: center; }
+                .project-title { 
+                    text-align: center; 
+                    font-size: 24px;
+                }
                 .contact-container {
                     width: 100%;
                     flex-wrap: nowrap;
@@ -506,13 +508,6 @@ body {
                         justify-content: start;
                         min-height: 500px;
                         overflow: auto;
-                        .arrow-left,
-                        .arrow-right {
-                            visibility: visible;
-                            position: absolute;
-                            width: 100%;
-                            z-index: 50;
-                        }
                         .links { 
                             position: relative;
                             width: 100%;
@@ -537,7 +532,6 @@ body {
                         }
                     }
                 }
-                .project-title { font-size: 24px; }
             }
         }
 
@@ -555,10 +549,17 @@ body {
 }
 
 @media (min-width: 767px) and (max-width: 1024px) {
+    .hidden-desktop { display: unset }
     .container {
         .scroll-container {
             .subcontainer {
+                .hidden-mobile { display: none; }
+                .project-title { 
+                    text-align: center;
+                    font-size: 24px;
+                }
                 .swiper-container {
+                    margin: 100px;
                     /* after checked */
                     #p-1:checked ~ .projects label[for="p-2"],
                     #p-2:checked ~ .projects label[for="p-3"],
@@ -575,19 +576,22 @@ body {
                         transform: unset;
                     }
                     .projects {
-                        flex-wrap: wrap;
-                        align-content: center;
+                        justify-content: start;
                         min-height: 500px;
-                        .arrow-left,
-                        .arrow-right {
-                            visibility: visible;
-                            position: absolute;
+                        overflow: auto;
+                        .links { 
+                            position: relative;
                             width: 100%;
+                            transform: translateX(-50%);
+                            left: 50%;
+                            bottom: 0;
+                            text-align: center; 
                         }
-                        .arrow-left { text-align: left; }
-                        .arrow-right {  text-align: right; }
                         .swiper-item {
-                            width: 550px;
+                            position: relative;
+                            width: 650px;
+                            height: 390px;
+                            margin: 0 5px 30px;
                             background-size: cover;
                             background-position: center;
                             background-repeat: no-repeat;
