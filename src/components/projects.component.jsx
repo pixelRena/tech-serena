@@ -14,6 +14,7 @@ const Projects = () => {
           <input type="radio" name="project" id="p-2" checked={currentSlide === 1} onChange={e => setCurrentSlide(1)}/>
           <input type="radio" name="project" id="p-3" checked={currentSlide === 2} onChange={e => setCurrentSlide(2)}/>
           <input type="radio" name="project" id="p-4" checked={currentSlide === 3} onChange={e => setCurrentSlide(3)}/>
+          <input type="radio" name="project" id="p-5" checked={currentSlide === 4} onChange={e => setCurrentSlide(4)}/>
           <div className="projects">
           { data.map(({type,client,tools,id,images}) => {
             return(
@@ -34,7 +35,7 @@ const Projects = () => {
               </div>
               <div className="links">
                 <div className="project-url"><a href={websiteurl} target="_blank" rel="noreferrer">Visit Project<VscLinkExternal className="external-icon" size={26}/></a></div>
-                <div className="project-url"><a href={githuburl} target="_blank" rel="noreferrer">View Code<VscLinkExternal className="external-icon" size={20}/></a></div>
+                <div className="project-url">{githuburl ? <a href={githuburl} target="_blank" rel="noreferrer">View Code<VscLinkExternal className="external-icon" size={20}/></a> : <a href="#top">Code Unavailable<VscLinkExternal className="external-icon" size={20}/></a>}</div>
               </div>
             </div>
             );
@@ -42,7 +43,7 @@ const Projects = () => {
           </div>
         </div>
         <div className="hidden-mobile project-url"><a href={data[currentSlide].websiteurl} target="_blank" rel="noreferrer">Visit Project<VscLinkExternal className="external-icon" size={26}/></a></div>
-        <div className="hidden-mobile project-url"><a href={data[currentSlide].githuburl} target="_blank" rel="noreferrer">View Code<VscLinkExternal className="external-icon" size={20}/></a></div>
+        <div className="hidden-mobile project-url">{data[currentSlide].githuburl && <a href={data[currentSlide].githuburl} target="_blank" rel="noreferrer">View Code<VscLinkExternal className="external-icon" size={20}/></a>}</div>
         </>
     );
 }

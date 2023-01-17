@@ -189,17 +189,19 @@ body {
                 #p-1:checked ~ .projects label[for="p-2"],
                 #p-2:checked ~ .projects label[for="p-3"],
                 #p-3:checked ~ .projects label[for="p-4"],
-                #p-4:checked ~ .projects label[for="p-1"] {
+                #p-4:checked ~ .projects label[for="p-5"],
+                #p-5:checked ~ .projects label[for="p-1"] {
                     cursor: pointer;
                     transform: translate3d(300px, 0, -90px) rotateY(-15deg) scale(0.8);
                     z-index: 10;
                 }
         
                 /* before checked */
-                #p-1:checked ~ .projects label[for="p-4"],
+                #p-1:checked ~ .projects label[for="p-5"],
                 #p-2:checked ~ .projects label[for="p-1"],
                 #p-3:checked ~ .projects label[for="p-2"],
-                #p-4:checked ~ .projects label[for="p-3"]{
+                #p-4:checked ~ .projects label[for="p-3"],
+                #p-5:checked ~ .projects label[for="p-4"]{
                     cursor: pointer;
                     transform: translate3d(-300px, 0, -90px) rotateY(15deg) scale(0.8);
                     z-index: 10;
@@ -208,7 +210,8 @@ body {
                 #p-1:checked ~ .projects label[for="p-1"],
                 #p-2:checked ~ .projects label[for="p-2"],
                 #p-3:checked ~ .projects label[for="p-3"],
-                #p-4:checked ~ .projects label[for="p-4"] {
+                #p-4:checked ~ .projects label[for="p-4"],
+                #p-5:checked ~ .projects label[for="p-5"] {
                     background-color: rgba(40, 40, 40, 1);
                     z-index: 13;
                 }
@@ -493,15 +496,17 @@ body {
                     #p-1:checked ~ .projects label[for="p-2"],
                     #p-2:checked ~ .projects label[for="p-3"],
                     #p-3:checked ~ .projects label[for="p-4"],
-                    #p-4:checked ~ .projects label[for="p-1"] {
+                    #p-4:checked ~ .projects label[for="p-5"],
+                    #p-5:checked ~ .projects label[for="p-1"] {
                         transform: unset;
                     }
             
                     /* before checked */
-                    #p-1:checked ~ .projects label[for="p-4"],
+                    #p-1:checked ~ .projects label[for="p-5"],
                     #p-2:checked ~ .projects label[for="p-1"],
                     #p-3:checked ~ .projects label[for="p-2"],
-                    #p-4:checked ~ .projects label[for="p-3"]{
+                    #p-4:checked ~ .projects label[for="p-3"],
+                    #p-5:checked ~ .projects label[for="p-4"]{
                         transform: unset;
                     }
                     .projects {
@@ -564,15 +569,17 @@ body {
                     #p-1:checked ~ .projects label[for="p-2"],
                     #p-2:checked ~ .projects label[for="p-3"],
                     #p-3:checked ~ .projects label[for="p-4"],
-                    #p-4:checked ~ .projects label[for="p-1"] {
+                    #p-4:checked ~ .projects label[for="p-5"],
+                    #p-5:checked ~ .projects label[for="p-1"] {
                         transform: unset;
                     }
             
                     /* before checked */
-                    #p-1:checked ~ .projects label[for="p-4"],
+                    #p-1:checked ~ .projects label[for="p-5"],
                     #p-2:checked ~ .projects label[for="p-1"],
                     #p-3:checked ~ .projects label[for="p-2"],
-                    #p-4:checked ~ .projects label[for="p-3"]{
+                    #p-4:checked ~ .projects label[for="p-3"],
+                    #p-5:checked ~ .projects label[for="p-4"]{
                         transform: unset;
                     }
                     .projects {
