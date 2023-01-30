@@ -1,5 +1,5 @@
 const projects = {
-    "data": [
+    "html": [
         {
             "id": 1,
             "title": "LAVART",
@@ -8,11 +8,12 @@ const projects = {
             "tools": "HTML, CSS, JavaScript",
             "images": {
                 "gif": "",
-                "coverpng": "../images/lavart.png",
+                "coverpng": "../images/lavart.jpg",
                 "cover2png": ""
             },
             "websiteurl": "https://art-gallery-template.vercel.app/",
-            "githuburl": ""
+            "githuburl": "",
+            "description": ""
         },
         {
             "id": 2,
@@ -22,14 +23,32 @@ const projects = {
             "tools": "HTML, Sass, Firebase, Express.js",
             "images": {
                 "gif": "https://devserena.herokuapp.com/images/cube.gif",
-                "coverpng": "../images/snuy.png",
-                "cover2png": "https://devserena.herokuapp.com/images/recommend2.png"
+                "coverpng": "../images/snuy.jpg",
+                "cover2png": "https://devserena.herokuapp.com/images/recommend2.jpg"
             },
             "websiteurl": "https://snuy-ttv-games.herokuapp.com/",
-            "githuburl": "https://github.com/pixelRena/games-recommendations"
+            "githuburl": "https://github.com/pixelRena/games-recommendations",
+            "description": ""
         },
         {
             "id": 3,
+            "title": "SPACE TOURISM",
+            "type": "Challenge (Frontendmentor.io)",
+            "client": "",
+            "tools": "HTML, Sass, JavaScript",
+            "images": {
+                "gif": "",
+                "coverpng": "../images/space.jpg",
+                "cover2png": ""
+            },
+            "websiteurl": "https://pixelrena.github.io/space-tourism-website",
+            "githuburl": "https://github.com/pixelRena/space-tourism-website",
+            "description": ""
+        }
+    ],
+    "react": [
+        {
+            "id": 1,
             "title": "E-COMMERCE SHOP",
             "type": "Commission",
             "client": "EXPERTECE",
@@ -37,39 +56,27 @@ const projects = {
             "images": {
                 "gif": "",
                 "cover2png": "https://res.cloudinary.com/dyqefy6t8/image/upload/v1665823921/ubsizpsqpqkyymxa23r6.jpg",
-                "coverpng": "../images/expertece.png"
+                "coverpng": "../images/expertece.jpg"
             },
             "websiteurl": "http://expertece-prototype.herokuapp.com/",
-            "githuburl": "https://github.com/pixelRena/expertece-prototype"
+            "githuburl": "https://github.com/pixelRena/expertece-prototype",
+            "description": ""
         },
         {
-            "id": 4,
+            "id": 2,
             "title": "PERSONAL TRAINER",
             "type": "Commission",
             "client": "RTFitness",
             "tools": "React, AWS, Sass, Bootstrap",
             "images": {
                 "gif": "",
-                "coverpng": "../images/rtf.png",
+                "coverpng": "../images/rtf.jpg",
                 "cover2png": ""
             },
             "websiteurl": "https://redemptiontemplefitness.herokuapp.com/",
-            "githuburl": "https://github.com/pixelRena/rt-fitness"
+            "githuburl": "https://github.com/pixelRena/rt-fitness",
+            "description": ""
         },
-        {
-            "id": 5,
-            "title": "SPACE TOURISM",
-            "type": "Challenge (Frontendmentor.io)",
-            "client": "",
-            "tools": "HTML, Sass, JavaScript",
-            "images": {
-                "gif": "",
-                "coverpng": "https://github.com/pixelRena/space-tourism-website/raw/main/assets/shared/home-screenshot.png",
-                "cover2png": ""
-            },
-            "websiteurl": "https://pixelrena.github.io/space-tourism-website",
-            "githuburl": "https://github.com/pixelRena/space-tourism-website"
-        }
     ]
 }
 

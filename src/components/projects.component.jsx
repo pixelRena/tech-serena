@@ -5,7 +5,7 @@ import MobileProject from "./mobile-projects.component";
 import projects from "../utils/projects.utils";
 
 const Projects = () => {
-    const { data } = projects;
+    const { html, react } = projects;
     const [ currentSlide, setCurrentSlide ] = useState(0);
     
     return(
@@ -18,16 +18,16 @@ const Projects = () => {
           <input type="radio" name="project" id="p-5" checked={currentSlide === 4} onChange={e => setCurrentSlide(4)}/>
 
           <div className="projects">
-          { data.map(project => 
+          { html.map(project => 
               <DesktopProject key={project.title} project={project}/>
           )}
-          { data.map(project => 
+          { html.map(project => 
               <MobileProject key={project.title} project={project}/>
           )}
           </div>
         </div>
-        <div className="hidden-mobile project-url"><a href={data[currentSlide].websiteurl} rel="noreferrer">More information</a></div>
-        <div className="hidden-mobile project-url">{data[currentSlide].githuburl && <a href={data[currentSlide].githuburl} target="_blank" rel="noreferrer">View Code<VscLinkExternal className="external-icon" size={20}/></a>}</div>
+        <div className="hidden-mobile project-url"><a href={html[currentSlide].websiteurl} rel="noreferrer">More information</a></div>
+        <div className="hidden-mobile project-url">{html[currentSlide].githuburl && <a href={html[currentSlide].githuburl} target="_blank" rel="noreferrer">View Code<VscLinkExternal className="external-icon" size={20}/></a>}</div>
         </>
     );
 }
