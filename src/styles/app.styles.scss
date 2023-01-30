@@ -122,6 +122,11 @@ body {
             flex-direction: column;
             align-items: center;
 
+            .btn-group {
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+            }
             .contact-container {
                 display: flex;
                 position: relative;
@@ -372,12 +377,11 @@ body {
         }
     }
     
-    .info-btn {
-        margin: 0 50px;
-        position: fixed;
+    .custom-button {
+        position: relative;
         font-family: $secondaryFont;
-        bottom: 30%;
-        font-size: 20px;
+        font-size: 15px;
+        margin: 0 5px; 
         @include themed() { 
             border: 1px solid t('primaryLight'); 
             color: t('primaryLight');
@@ -387,6 +391,19 @@ body {
         background-repeat: no-repeat;
         transition: .4s;
         padding: 15px;
+        &.active {
+            @include themed() { 
+                background-image: linear-gradient(t('primaryLight'),t('primaryLight'));
+                color: t('primaryDark'); 
+            }
+            background-size: 100% 100%;
+        }
+        &.fixed { 
+            position: fixed; 
+            font-size: 20px;
+            bottom: 30%;
+            margin: 0 50px;
+        }
         &:hover {
             background-size: 100% 100%;  
             @include themed() { 

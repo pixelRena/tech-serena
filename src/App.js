@@ -1,34 +1,41 @@
-import { useState, useRef, useEffect } from "react";
+import { useState, useEffect } from "react";
 import './styles/app.styles.scss';
 import Home from "./components/home.component";
 import Theme from "./components/theme.component";
 import Overlay from "./components/overlay.component";
-import SubContainer from "./components/subcontainer.component";
+import Projects from "./components/projects.component";
+import Button from "./components/button.component";
+import Info from "./components/info.component";
 
 function App() {
-  const [ showContainer, setShowContainer ] = useState("projects");
-  const [ count, setCount ] = useState(1);
-  const containerWindow = useRef();
-
-  const scrollUp = () => { containerWindow.current.scrollTo({top: 0, behavior: "smooth"}); }
+  const [ showProjects, setShowProjects ] = useState(true);
 
   useEffect(() => {
-    if(count === 1) {
-      setCount(2);
-    } else {
-      const offsetBottom = containerWindow.current.offsetTop + containerWindow.current.offsetHeight;
-      containerWindow.current.scrollTo({top: offsetBottom, behavior: "smooth"})
-    }
-  },[showContainer]);
+  },[showProjects]);
 
   return (
     <div className="container">
       <Overlay/>
       <Theme/>
-      <Home showContainer={showContainer}/>
-      <div className="scroll-container" ref={containerWindow}>
-        <button className="info-btn" onClick={() => setShowContainer(showContainer === false ? "projects" : false)}>{showContainer === false ? 'Projects': 'Contact Information'}</button>
-        <SubContainer showContainer={showContainer} scrollUp={scrollUp}/>
+      <Home showProjects={showProjects}/>
+      <div className="scroll-container">
+        <div className="subcontainer">
+          <div className="btn-group">
+            <div className="btn-items">
+              <Button>All Projects</Button>
+              <Button>HTML</Button>
+              <Button>React</Button>
+            </div>
+            <div className="btn-items">
+              <Button additionalClasses={"active"} onClick={() => setShowProjects(!showProjects)}>{showProjects ? 'Contact Information': 'View Projects'}</Button>
+            </div>
+          </div>
+          {showProjects ? 
+          <Projects showProjects={showProjects} setShowProjects={setShowProjects}/> 
+          :
+          <Info/>
+          }
+        </div> 
       </div>
     </div>
   );
