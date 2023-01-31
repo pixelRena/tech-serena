@@ -2,33 +2,35 @@ const projects = {
     "html": [
         {
             "id": 1,
-            "title": "LAVART",
-            "type": "Personal (Template made to purchase)",
+            "title": "LAVART GALLERY",
+            "type": "Personal",
             "client": "",
-            "tools": "HTML, CSS, JavaScript",
+            "tools": "HTML, CSS, JavaScript, Figma",
             "images": {
                 "gif": "",
-                "coverpng": "../images/lavart.jpg",
-                "cover2png": ""
+                "thumbnail": "../images/lavart-thumbnail.jpg",
+                "cover": "../images/lavart.jpg",
+                "cover_alt": "../images/lavart2.jpg"
             },
             "websiteurl": "https://art-gallery-template.vercel.app/",
             "githuburl": "",
-            "description": ""
+            "description": "Website template for creative artists to showcase their work. This project was created using HTML, styled with modern CSS, and JavaScript. The template comes with well written documentation to assist those who may want to change the feel of the website."
         },
         {
             "id": 2,
             "title": "GAMING SUGGESTIONS",
             "type": "Commission",
             "client": "SnuyGames",
-            "tools": "HTML, Sass, Firebase, Express.js",
+            "tools": "HTML, Sass, Firebase, Express.js, SteamAPI, RAWGAPI",
             "images": {
-                "gif": "https://devserena.herokuapp.com/images/cube.gif",
-                "coverpng": "../images/snuy.jpg",
-                "cover2png": "https://devserena.herokuapp.com/images/recommend2.jpg"
+                "gif": "../images/snuy-cover.gif",
+                "thumbnail": "../images/snuy-thumbnail.gif",
+                "cover": "../images/snuy-cover.gif",
+                "cover_alt": "https://devserena.herokuapp.com/images/recommend2.jpg"
             },
-            "websiteurl": "https://snuy-ttv-games.herokuapp.com/",
+            "websiteurl": "http://nuygames.xyz/",
             "githuburl": "https://github.com/pixelRena/games-recommendations",
-            "description": ""
+            "description": "Responsive web application that allows users and followers of twitch streamer to submit their suggest games to play next. The games are displayed using Steam API for owned games and RAWG API for video game database."
         },
         {
             "id": 3,
@@ -38,13 +40,14 @@ const projects = {
             "tools": "HTML, Sass, JavaScript",
             "images": {
                 "gif": "",
-                "coverpng": "../images/space.jpg",
-                "cover2png": ""
+                "thumbnail": "../images/space-thumbnail.gif",
+                "cover": "../images/space.jpg",
+                "cover_alt": ""
             },
             "websiteurl": "https://pixelrena.github.io/space-tourism-website",
             "githuburl": "https://github.com/pixelRena/space-tourism-website",
-            "description": ""
-        }
+            "description": "A mobile-first responsive website that adapts to different screen sizes and gives information about different planets in our solar system."
+        },
     ],
     "react": [
         {
@@ -55,12 +58,13 @@ const projects = {
             "tools": "React, Bootstrap, MongoDB, Express.js, StripeAPI",
             "images": {
                 "gif": "",
-                "cover2png": "https://res.cloudinary.com/dyqefy6t8/image/upload/v1665823921/ubsizpsqpqkyymxa23r6.jpg",
-                "coverpng": "../images/expertece.jpg"
+                "thumbnail": "../images/expertece-thumbnail.jpg",
+                "cover_alt": "https://res.cloudinary.com/dyqefy6t8/image/upload/v1665823921/ubsizpsqpqkyymxa23r6.jpg",
+                "cover": "../images/expertece.jpg"
             },
             "websiteurl": "http://expertece-prototype.herokuapp.com/",
             "githuburl": "https://github.com/pixelRena/expertece-prototype",
-            "description": ""
+            "description": "Responsive web application designated to allow users to browse and purchase customized products. Implemented admin dashboard to manage products uploaded, customer database and payments"
         },
         {
             "id": 2,
@@ -70,12 +74,13 @@ const projects = {
             "tools": "React, AWS, Sass, Bootstrap",
             "images": {
                 "gif": "",
-                "coverpng": "../images/rtf.jpg",
-                "cover2png": ""
+                "thumbnail": "../images/rtf-thumbnail.jpg",
+                "cover": "../images/rtf.jpg",
+                "cover_alt": ""
             },
             "websiteurl": "https://redemptiontemplefitness.herokuapp.com/",
             "githuburl": "https://github.com/pixelRena/rt-fitness",
-            "description": ""
+            "description": "A web application to reach new and existing users to promote training services and allows for users to request for more information by submitting a form."
         },
     ]
 }

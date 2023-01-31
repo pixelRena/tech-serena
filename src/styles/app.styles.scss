@@ -17,11 +17,13 @@ a {
 
 .hidden-desktop { display: none; }
 
-::-webkit-scrollbar { width: 7px; }
+::-webkit-scrollbar { 
+    width: 7px; 
+    height: 6px;
+}
 
 /* Track */
 ::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 1px black; 
     background: rgba(0,0,0,0); 
 }
 
@@ -65,27 +67,73 @@ body {
         top: 10%;
     }
 }
+
+.project-overlay {
+    height: 100%; 
+}
+.project-information {
+    font-family: $secondaryFont;
+    background: #0F0F0F !important;
+    box-shadow: 1px 1px 20px rgba(189, 189, 189, 0.2) !important;
+    color: white;
+    .close-icon { 
+        font-family: $secondaryFont;
+        color: white; 
+        &:hover {
+            opacity: .8;
+        }
+    }
+    .project-image {
+        margin: 0;
+        padding: 15px;
+        img { 
+            margin: 0;
+            width: 100%; 
+            box-shadow: 1px 1px 10px rgba(210, 224, 226, 0.2);
+        }
+    }
+    .project-description { 
+        margin: 20px 20px; }
+    .project-stats { 
+        border: 1px solid rgb(255, 255, 255);
+        padding: 20px;
+        span { 
+            font-style: italic;
+            color: $secondaryLight; 
+        }
+    }
+    .project-urls {
+        display: flex;
+        justify-content: space-between;
+    }
+    a {
+        margin: 0; 
+        color: white;
+    }
+    h2 { font-family: $primaryFont; }
+}
   
 .container {
     position: relative;
     padding: 20px;
     height: 95vh;
     background-image: url("../../public/images/production ID_4779866.gif");
+    background-size: cover;
     background-repeat: no-repeat;
 
-    .back-to-top-btn {
-        position: fixed;
-        right: 0;
-        top: 0;
-        background: rgba(0,0,0,0);
-        @include themed() { color: t('primaryDark'); }
-        @include themed() { border: 1px solid t('primaryDark'); }
-        border-radius: 20px 0 0 0;
-        &:hover {
-            @include themed() { background: t('primaryDark'); }
-            @include themed() { color: t('primaryLight'); }
-        }
-    }
+    // .back-to-top-btn {
+    //     position: fixed;
+    //     right: 0;
+    //     top: 0;
+    //     background: rgba(0,0,0,0);
+    //     @include themed() { color: t('primaryDark'); }
+    //     @include themed() { border: 1px solid t('primaryDark'); }
+    //     border-radius: 20px 0 0 0;
+    //     &:hover {
+    //         @include themed() { background: t('primaryDark'); }
+    //         @include themed() { color: t('primaryLight'); }
+    //     }
+    // }
 
     .overlay {
         z-index: 1;
@@ -170,63 +218,14 @@ body {
                     span a { color: $secondaryLight; }
                 }
             }
-            .project-title {
-                font-family: $primaryFont;
-                font-size: 40px;
-                font-weight: bold;
-                @include themed() { color: t('primaryLight'); }
-                span { 
-                    font-size: 24px;
-                    color: $secondaryLight; 
-                }
-            }
-            .project-url {
-                font-family: $secondaryFont;
-                margin: 0;
-                font-size: 24px;
-                &:last-child { font-size: 20px; }
-            }
             .swiper-container {
                 width: 100%;
-                input { display: none; }
-        
-                /* after checked */
-                #p-1:checked ~ .projects label[for="p-2"],
-                #p-2:checked ~ .projects label[for="p-3"],
-                #p-3:checked ~ .projects label[for="p-4"],
-                #p-4:checked ~ .projects label[for="p-5"],
-                #p-5:checked ~ .projects label[for="p-1"] {
-                    cursor: pointer;
-                    transform: translate3d(300px, 0, -90px) rotateY(-15deg) scale(0.8);
-                    z-index: 10;
-                }
-        
-                /* before checked */
-                #p-1:checked ~ .projects label[for="p-5"],
-                #p-2:checked ~ .projects label[for="p-1"],
-                #p-3:checked ~ .projects label[for="p-2"],
-                #p-4:checked ~ .projects label[for="p-3"],
-                #p-5:checked ~ .projects label[for="p-4"]{
-                    cursor: pointer;
-                    transform: translate3d(-300px, 0, -90px) rotateY(15deg) scale(0.8);
-                    z-index: 10;
-                }
-
-                #p-1:checked ~ .projects label[for="p-1"],
-                #p-2:checked ~ .projects label[for="p-2"],
-                #p-3:checked ~ .projects label[for="p-3"],
-                #p-4:checked ~ .projects label[for="p-4"],
-                #p-5:checked ~ .projects label[for="p-5"] {
-                    background-color: rgba(40, 40, 40, 1);
-                    z-index: 13;
-                }
         
                 .projects {
                     position: relative;
                     display: flex;
-                    justify-content: center;
                     min-height: 380px;
-                    align-items: center;
+                    overflow: auto;
                     
                     .arrow-left,
                     .arrow-right { 
@@ -235,7 +234,7 @@ body {
                     }
         
                     .swiper-item {
-                        position: absolute;
+                        position: relative;
                         font-size: 60px;
                         transition: transform 0.4s;
                         background-color: rgba(40, 40, 40, 0.5);
@@ -245,38 +244,21 @@ body {
                         height: 380px;
                         color: white;
                         text-align: center;
-                        .project-information {
-                            position: relative;
-                            background-color: rgba(0,0,0,0.6);
+                        .swiper-item-background {
                             margin: 0;
                             width: 100%;
-                            height: 378px;
-                            font-family: $secondaryFont;
-                            font-size: 22px;
-                            &:hover {
-                                transition: .4s;
-                                opacity: 0;
-                            }
-                            .project-type,
-                            .project-client,
-                            .project-tools { position: absolute; }
-                            span { 
-                                color: $secondaryLight;
-                                font-style: italic;
-                            }
-                            .project-type,
-                            .project-client {
-                                top: 5px;
-                            }
-                            .project-type {
-                                left: 0;
-                            }
-                            .project-client { right: 5px; }
-                            .project-tools { 
+                            height: 100%;
+                            background-color: rgba(0, 0, 0, 0.5); 
+                            .swiper-item-button {
+                                position: absolute;
+                                cursor: pointer;
                                 left: 50%;
-                                transform: translateX(-50%);
-                                width: 65%;
-                                bottom: 5px; 
+                                top: 50%;
+                                transform: translate(-50%, -50%);
+                                &:hover { 
+                                    transition: ease .4s;
+                                    opacity: .5;
+                                }
                             }
                         }
                     }
@@ -439,9 +421,9 @@ body {
 }
 
 @keyframes bounce {
-    0%, 20%, 50%, 80%, 100% {transform: translateY(0);} 
-    40% {transform: translateY(-30px);} 
-    60% {transform: translateY(-15px);} 
+    0%, 20%, 50%, 80%, 100% {top: 50%;} 
+    40% {top: 40%;} 
+    60% {top: 45%;} 
 } 
 
  @media (max-width: 767px) {
@@ -509,23 +491,6 @@ body {
                     .contact-footer { font-size: 18px; }
                 }
                 .swiper-container {
-                    /* after checked */
-                    #p-1:checked ~ .projects label[for="p-2"],
-                    #p-2:checked ~ .projects label[for="p-3"],
-                    #p-3:checked ~ .projects label[for="p-4"],
-                    #p-4:checked ~ .projects label[for="p-5"],
-                    #p-5:checked ~ .projects label[for="p-1"] {
-                        transform: unset;
-                    }
-            
-                    /* before checked */
-                    #p-1:checked ~ .projects label[for="p-5"],
-                    #p-2:checked ~ .projects label[for="p-1"],
-                    #p-3:checked ~ .projects label[for="p-2"],
-                    #p-4:checked ~ .projects label[for="p-3"],
-                    #p-5:checked ~ .projects label[for="p-4"]{
-                        transform: unset;
-                    }
                     .projects {
                         justify-content: start;
                         min-height: 500px;
@@ -544,13 +509,6 @@ body {
                             width: 390px;
                             height: 300px;
                             margin: 0 5px 30px;
-                            .project-information {
-                                background-color: rgba(0,0,0,0.2);
-                                .project-type,
-                                .project-client {
-                                    display: none;
-                                }
-                            }
                         }
                     }
                 }
@@ -561,11 +519,6 @@ body {
             width: 100%; 
             text-align: center;
             .theme-toggler { text-align: center; } 
-        }
-
-        .arrow-down-btn-container { 
-            text-align: center;
-            .see-more-btn { animation: none; }
         }
    }
 }
@@ -582,23 +535,6 @@ body {
                 }
                 .swiper-container {
                     margin: 100px;
-                    /* after checked */
-                    #p-1:checked ~ .projects label[for="p-2"],
-                    #p-2:checked ~ .projects label[for="p-3"],
-                    #p-3:checked ~ .projects label[for="p-4"],
-                    #p-4:checked ~ .projects label[for="p-5"],
-                    #p-5:checked ~ .projects label[for="p-1"] {
-                        transform: unset;
-                    }
-            
-                    /* before checked */
-                    #p-1:checked ~ .projects label[for="p-5"],
-                    #p-2:checked ~ .projects label[for="p-1"],
-                    #p-3:checked ~ .projects label[for="p-2"],
-                    #p-4:checked ~ .projects label[for="p-3"],
-                    #p-5:checked ~ .projects label[for="p-4"]{
-                        transform: unset;
-                    }
                     .projects {
                         justify-content: start;
                         min-height: 500px;
@@ -619,9 +555,6 @@ body {
                             background-size: cover;
                             background-position: center;
                             background-repeat: no-repeat;
-                            .project-information {
-                                background-color: rgba(0,0,0,0.2);
-                            }
                         }
                     }
                 }
