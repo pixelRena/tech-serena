@@ -9,6 +9,7 @@ import Info from "./components/info.component";
 
 function App() {
   const [ showProjects, setShowProjects ] = useState(true);
+  const [ showTypeOfProjects, setShowTypeOfProjects ] = useState("all");
 
   useEffect(() => {
   },[showProjects]);
@@ -22,16 +23,19 @@ function App() {
         <div className="subcontainer">
           <div className="btn-group">
             <div className="btn-items">
-              <Button>All Projects</Button>
-              <Button>HTML</Button>
-              <Button>React</Button>
+              <Button additionalClasses={showTypeOfProjects === "all" && "active"} onClick={() => setShowTypeOfProjects("all")} hidden={!showProjects}>All Projects</Button>
+              <Button additionalClasses={showTypeOfProjects === "html" && "active"} onClick={() => setShowTypeOfProjects("html")} hidden={!showProjects}>HTML</Button>
+              <Button additionalClasses={showTypeOfProjects === "react" && "active"} onClick={() => setShowTypeOfProjects("react")} hidden={!showProjects}>React</Button>
             </div>
             <div className="btn-items">
               <Button additionalClasses={"active"} onClick={() => setShowProjects(!showProjects)}>{showProjects ? 'Contact Information': 'View Projects'}</Button>
             </div>
           </div>
           {showProjects ? 
-          <Projects showProjects={showProjects} setShowProjects={setShowProjects}/> 
+          <>
+          <div className="text-info">Click the "+" for more information</div>
+          <Projects showTypeOfProjects={showTypeOfProjects}/> 
+          </>
           :
           <Info/>
           }

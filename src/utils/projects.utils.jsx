@@ -3,7 +3,7 @@ const projects = {
         {
             "id": 1,
             "title": "LAVART GALLERY",
-            "type": "Personal",
+            "type": "Paid Template",
             "client": "",
             "tools": "HTML, CSS, JavaScript, Figma",
             "images": {
@@ -58,7 +58,7 @@ const projects = {
             "tools": "React, Bootstrap, MongoDB, Express.js, StripeAPI",
             "images": {
                 "gif": "",
-                "thumbnail": "../images/expertece-thumbnail.jpg",
+                "thumbnail": "../images/expertece-thumbnail.gif",
                 "cover_alt": "https://res.cloudinary.com/dyqefy6t8/image/upload/v1665823921/ubsizpsqpqkyymxa23r6.jpg",
                 "cover": "../images/expertece.jpg"
             },
@@ -74,7 +74,7 @@ const projects = {
             "tools": "React, AWS, Sass, Bootstrap",
             "images": {
                 "gif": "",
-                "thumbnail": "../images/rtf-thumbnail.jpg",
+                "thumbnail": "../images/rtf-thumbnail.gif",
                 "cover": "../images/rtf.jpg",
                 "cover_alt": ""
             },

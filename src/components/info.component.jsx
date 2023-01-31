@@ -27,7 +27,7 @@ const Info = () => {
 
     return(
         <div className="contact-container">
-            <div className="contact-header">INFORMATION</div>
+            <div className="contact-header"><span>Available</span> For Hire.</div>
             <div className="contact-links">
               <div className="contact-item" onMouseOver={() => setEl(1)} onMouseLeave={() => setEl()}><a href="https://www.linkedin.com/in/sdean00/" target="_blank" rel="noreferrer">.LINKEDIN<VscLinkExternal className="external-icon" size={26}/></a><span className="reveal-info" ref={linkedinEl}>sdean00</span></div>
               <div className="contact-item" onMouseOver={() => setEl(2)} onMouseLeave={() => setEl()}><a href="https://github.com/pixelRena" target="_blank" rel="noreferrer">.GITHUB<VscLinkExternal className="external-icon" size={26}/></a><span className="reveal-info" ref={githubEl}>@pixelRena</span></div>
