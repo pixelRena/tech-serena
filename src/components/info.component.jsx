@@ -34,7 +34,7 @@ const Info = () => {
               <div className="contact-item" onMouseOver={() => setEl(2)} onMouseLeave={() => setEl()}><a href="https://github.com/pixelRena" target="_blank" rel="noreferrer">.GITHUB<VscLinkExternal className="external-icon" size={26}/></a><span className="reveal-info" ref={githubEl}>@pixelRena</span></div>
               <div className="contact-item" onMouseOver={() => setEl(3)} onMouseLeave={() => setEl()}><a href="mailto:dserena01@yahoo.com" target="_blank" rel="noreferrer">.EMAIL</a><span className="reveal-info" ref={emailEl}>dserena01@yahoo.com</span></div>
             </div>
-            <div><a href="../Serena_Dean_Resume.pdf" download="Serena_Dean_Resume" target="_blank"><Button>Download Resume</Button></a></div>
+            <div><a href="../Serena_Dean_Resume.pdf" target="_blank"><Button>Download Resume</Button></a></div>
             <div className="contact-footer">Handcrafted with love by <span><a href="https://github.com/pixelRena">Serena/pixelRena</a></span></div>
         </div>
     );
