@@ -52,6 +52,22 @@ const projects = {
     "react": [
         {
             "id": 1,
+            "title": "TRELLO DASHBOARD",
+            "type": "Personal",
+            "client": "",
+            "tools": "React, Next.js, TailwindCSS, TrelloAPI",
+            "images": {
+                "gif": "",
+                "thumbnail": "../images/trello-beta.jpg",
+                "cover": "../images/trello-beta.jpg",
+                "cover_alt": ""
+            },
+            "websiteurl": "https://beta-trello-dashboard.vercel.app/",
+            "githuburl": "https://github.com/pixelRena/Trello-Dashboard",
+            "description": "A web application to view in depth information about your Trello boards. Trellometrics is the key to quick and seamless viewing and analyzing the data for your boards on trello. The application is still in beta and is still being worked on."
+        },
+        {
+            "id": 2,
             "title": "E-COMMERCE SHOP",
             "type": "Commission",
             "client": "EXPERTECE",
@@ -67,7 +83,7 @@ const projects = {
             "description": "Responsive web application designated to allow users to browse and purchase customized products. Implemented admin dashboard to manage products uploaded, customer database and payments"
         },
         {
-            "id": 2,
+            "id": 3,
             "title": "PERSONAL TRAINER",
             "type": "Commission",
             "client": "RTFitness",

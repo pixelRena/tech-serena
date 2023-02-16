@@ -7,10 +7,10 @@ const Projects = ({showTypeOfProjects}) => {
           <div className="projects">
           { showTypeOfProjects === "all" ?
             <>
-            {projects["html"].map(project => 
+            {projects["react"].map(project => 
               <DesktopProject key={project.title} project={project}/>
             )}
-            {projects["react"].map(project => 
+            {projects["html"].map(project => 
               <DesktopProject key={project.title} project={project}/>
             )}
             </>

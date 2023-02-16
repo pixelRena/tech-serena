@@ -8,7 +8,7 @@ const Home = ({showProjects}) => {
         <div className="bio">
           <div className="title"><span>Design</span>er <span>/</span> <span>Web</span> Developer</div>
           <div className="objective">
-            I help small businesses get more reach by creating designs and bringing them to life.
+            I help businesses get more reach by creating designs and bringing them to life while you work on what's most important.
             <span>Scroll to view my {showProjects === false ? "contact information" : "works"}.</span>
           </div>
         </div>
