@@ -79,7 +79,7 @@ const projects = {
                 "cover": "../images/expertece.jpg"
             },
             "websiteurl": "http://expertece-prototype.herokuapp.com/",
-            "githuburl": "https://github.com/pixelRena/expertece-prototype",
+            "githuburl": "",
             "description": "Responsive web application designated to allow users to browse and purchase customized products. Implemented admin dashboard to manage products uploaded, customer database and payments"
         },
         {
@@ -95,7 +95,7 @@ const projects = {
                 "cover_alt": ""
             },
             "websiteurl": "https://redemptiontemplefitness.herokuapp.com/",
-            "githuburl": "https://github.com/pixelRena/rt-fitness",
+            "githuburl": "",
             "description": "A web application to reach new and existing users to promote training services and allows for users to request for more information by submitting a form."
         },
     ]
