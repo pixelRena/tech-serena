@@ -15,33 +15,21 @@ function App() {
   },[showProjects]);
 
   return (
+    <>
+    
+    <div id="bgvideo">
+      <video autoPlay playsInline muted loop>
+        <source src="videos/vecteezy_old-damaged-film-texture-dust-speckles-and-noise_2016095.mp4" type="video/mp4"></source>
+        <a href="https://www.vecteezy.com/video/2016095-old-damaged-film-with-noise">Old Damaged Film with Noise Stock Videos by Vecteezy</a>
+      </video>
+    </div>
+
+
     <div className="container">
-      <Overlay/>
       <Theme/>
       <Home showProjects={showProjects}/>
-      <div className="scroll-container">
-        <div className="subcontainer">
-          <div className="btn-group">
-            <div className="btn-items">
-              <Button additionalClasses={showTypeOfProjects === "all" && "active"} onClick={() => setShowTypeOfProjects("all")} hidden={!showProjects}>All Projects</Button>
-              <Button additionalClasses={showTypeOfProjects === "html" && "active"} onClick={() => setShowTypeOfProjects("html")} hidden={!showProjects}>HTML</Button>
-              <Button additionalClasses={showTypeOfProjects === "react" && "active"} onClick={() => setShowTypeOfProjects("react")} hidden={!showProjects}>React</Button>
-            </div>
-            <div className="btn-items">
-              <Button additionalClasses={"active"} onClick={() => setShowProjects(!showProjects)}>{showProjects ? 'Contact Information': 'View Projects'}</Button>
-            </div>
-          </div>
-          {showProjects ? 
-          <>
-          <div className="text-info">Click the "+" for more information</div>
-          <Projects showTypeOfProjects={showTypeOfProjects}/> 
-          </>
-          :
-          <Info/>
-          }
-        </div> 
-      </div>
     </div>
+    </>
   );
 }
 

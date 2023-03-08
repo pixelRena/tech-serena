@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital@0;1&family=Montserrat:wght@300;700&family=VT323&display=swap');
 
 $primaryLight: #FFFFFF;
-$primaryDark: #000000;
+$primaryDark: #0F0F0F;
 $secondaryLight: #7342FF;
 
 $primaryFont: 'Montserrat', sans-serif;
@@ -11,10 +11,12 @@ $footerFont: 'VT323', monospace;
 $themes: (
   light: (
     backgroundColor: #fff,
-    overlayColor: #000,
+    overlayColor: #0F0F0F,
     primaryLight: $primaryLight,
     primaryDark: $primaryDark,
     buttonColor: $secondaryLight,
+    bgFilter: invert(-100%),
+    emailBg: rgba(0,0,0,0.7)
   ),
   dark: (
     backgroundColor: #0F0F0F,
@@ -22,6 +24,8 @@ $themes: (
     primaryLight: $primaryDark,
     primaryDark: $primaryLight,
     buttonColor: $secondaryLight,
+    bgFilter: invert(100%),
+    emailBg: rgba(255,255,255,0.4)
   ),
 );
 

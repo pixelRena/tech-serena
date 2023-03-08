@@ -68,7 +68,7 @@ const projects = {
         },
         {
             "id": 2,
-            "title": "E-COMMERCE SHOP",
+            "title": "EXPERTECE COMMERCE",
             "type": "Commission",
             "client": "EXPERTECE",
             "tools": "React, Bootstrap, MongoDB, Express.js, StripeAPI",
