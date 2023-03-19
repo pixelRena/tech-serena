@@ -1,22 +1,6 @@
 const projects = {
     "html": [
         {
-            "id": 1,
-            "title": "LAVART GALLERY",
-            "type": "Paid Template",
-            "client": "",
-            "tools": "HTML, CSS, JavaScript, Figma",
-            "images": {
-                "gif": "",
-                "thumbnail": "../images/lavart-thumbnail.jpg",
-                "cover": "../images/lavart.jpg",
-                "cover_alt": "../images/lavart2.jpg"
-            },
-            "websiteurl": "https://art-gallery-template.vercel.app/",
-            "githuburl": "",
-            "description": "Website template for creative artists to showcase their work. This project was created using HTML, styled with modern CSS, and JavaScript. The template comes with well written documentation to assist those who may want to change the feel of the website."
-        },
-        {
             "id": 2,
             "title": "GAMING SUGGESTIONS",
             "type": "Commission",
@@ -31,22 +15,6 @@ const projects = {
             "websiteurl": "http://nuygames.xyz/",
             "githuburl": "https://github.com/pixelRena/games-recommendations",
             "description": "Responsive web application that allows users and followers of twitch streamer to submit their suggest games to play next. The games are displayed using Steam API for owned games and RAWG API for video game database."
-        },
-        {
-            "id": 3,
-            "title": "SPACE TOURISM",
-            "type": "Challenge (Frontendmentor.io)",
-            "client": "",
-            "tools": "HTML, Sass, JavaScript",
-            "images": {
-                "gif": "",
-                "thumbnail": "../images/space-thumbnail.gif",
-                "cover": "../images/space.jpg",
-                "cover_alt": ""
-            },
-            "websiteurl": "https://pixelrena.github.io/space-tourism-website",
-            "githuburl": "https://github.com/pixelRena/space-tourism-website",
-            "description": "A mobile-first responsive website that adapts to different screen sizes and gives information about different planets in our solar system."
         },
     ],
     "react": [

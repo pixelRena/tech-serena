@@ -55,20 +55,6 @@ body {
     overflow-y: hidden;
     @include themed() { background: t('backgroundColor'); }
 }
-
-#bgvideo {
-    position: relative;
-    video {
-        margin: 0;
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100vh;
-        object-fit: cover;
-        @include themed() { filter: t('bgFilter'); }
-    }
-}
   
 .container {
     position: relative;
@@ -141,7 +127,7 @@ body {
             .bio {
                 font-family: $secondaryFont;
                 @include themed() { color: t('primaryDark'); }
-                width: 50%;
+                width: 100%;
                 .title {  
                     white-space: nowrap;
                     font-size: 36px;
@@ -158,28 +144,6 @@ body {
                         margin: 55px 0 55px; 
                     }
                 }
-            }
-        }
-        #mobile-message {
-            display: none;
-        }
-        #short-about {
-            display: flex;
-            flex-direction: row;
-            position: absolute;
-            bottom: 25px;
-            left: 0;
-            @include themed() { color: t('primaryDark'); }
-            font-family: $primaryFont;
-            font-size: 24px;
-            #short-role { font-weight: bold;}
-            .short-nav-item {
-                position: relative;
-                z-index: 60;
-                cursor: pointer;
-                font-size: 20px;
-                &:hover { opacity: 0.5; }
-                &.active { opacity: 0.5; }
             }
         }
         #email-btn {
@@ -207,16 +171,17 @@ body {
         font-family: $secondaryFont;
         display: flex;
         flex-direction: row;
-        justify-content: start;
+        justify-content: flex-start;
         background-color: rgba(255,255,255,0.5);
         backdrop-filter: blur(10px);
-        width: 100%;
+        width: 880px;
+        height: 80%;
         border-top: 8px solid $secondaryLight;
         .project-image {
             width: 600px;
             height: 400px;
             background-position: center;
-            background-size: cover;
+            background-size: contain;
             background-repeat: no-repeat;
         }
         .project-information {
@@ -241,20 +206,27 @@ body {
    } 
 
    .projects-list {
-        font-family: $secondaryFont;
         @include themed() { color: t('primaryDark'); }
+        font-family: $secondaryFont;
+        display: flex;
+        flex-direction: column;
         align-self: flex-end;
         position: relative;
         text-align: right;
         bottom: 0;
         z-index: 100;
-        width: 100%;
+        width: 70%;
        .projects-list-title {
+            text-decoration: none;
+            @include themed() { color: t('primaryDark'); }
             font-size: 20px;
             cursor: pointer;
             padding-bottom: 10px;
             background-color: transparent;
             .selected { @include themed() { background-color: t('primaryDark'); }}
+            .projects-list-type {
+                font-size: 15px;
+            }
             .projects-list-bullet {
                 margin-left: 5px;
                 display: inline-block;
@@ -307,18 +279,6 @@ body {
                     }
                 }   
             }
-            #short-about {
-                display: none;
-            }
-            #mobile-message {
-                font-family: $primaryFont;
-                font-weight: bold;
-                margin: 0;
-                padding: 0;
-                text-align: center;
-                @include themed() { color: t('primaryDark'); }
-                display: block;
-            }
         }
         .project-container {
             display: none;
@@ -335,8 +295,20 @@ body {
             }
         }
         .projects-list {
-            display: none;
-            text-align: unset;
+            text-align: center;
+            display: flex;
+            justify-content: flex-end;
+            width: 100%;
+            height: 50%;
+            .projects-list-title {
+                font-size: 19px;
+                .projects-list-bullet {
+                    display: none;
+                }
+            }
+            .projects-list-type {
+                font-size: 15px;
+            }
         }
 
         .theme-container { 
