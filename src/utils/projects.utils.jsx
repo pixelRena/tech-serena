@@ -66,6 +66,22 @@ const projects = {
             "githuburl": "",
             "description": "A web application to reach new and existing users to promote training services and allows for users to request for more information by submitting a form."
         },
+        {
+            "id": 4,
+            "title": "VISAGE AI",
+            "type": "Personal",
+            "client": "",
+            "tools": "React, Express Postgres",
+            "images": {
+                "gif": "",
+                "thumbnail": "",
+                "cover": "",
+                "cover_alt": ""
+            },
+            "websiteurl": "https://visage-ai.herokuapp.com/",
+            "githuburl": "https://github.com/pixelRena/VisageAi",
+            "description": "Clarifai API to detect faces within an image given"
+        },
     ]
 }
 
