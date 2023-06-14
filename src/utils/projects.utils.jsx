@@ -46,7 +46,7 @@ const projects = {
                 "cover_alt": "https://res.cloudinary.com/dyqefy6t8/image/upload/v1665823921/ubsizpsqpqkyymxa23r6.jpg",
                 "cover": "../images/expertece.jpg"
             },
-            "websiteurl": "http://www.expertece-prototype.store",
+            "websiteurl": "http://expertece-prototype.store",
             "githuburl": "",
             "description": "Responsive web application designated to allow users to browse and purchase customized products. Implemented admin dashboard to manage products uploaded, customer database and payments"
         },
