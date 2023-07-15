@@ -15,7 +15,7 @@ const projects = {
             "websiteurl": "http://nuygames.xyz/",
             "githuburl": "https://github.com/pixelRena/games-recommendations",
             "description": "Responsive web application that allows users and followers of twitch streamer to submit their suggest games to play next. The games are displayed using Steam API for owned games and RAWG API for video game database."
-        },
+        }
     ],
     "react": [
         {
@@ -32,7 +32,7 @@ const projects = {
             },
             "websiteurl": "https://beta-trello-dashboard.vercel.app/",
             "githuburl": "https://github.com/pixelRena/Trello-Dashboard",
-            "description": "A web application to view in depth information about your Trello boards. Trellometrics is the key to quick and seamless viewing and analyzing the data for your boards on trello. The application is still in beta and is still being worked on."
+            "description": "A web application to view in-depth information about your Trello boards. Trellometrics is the key to quick and seamless viewing and analyzing the data for your boards on Trello. The application is still in beta and is still being worked on."
         },
         {
             "id": 2,
@@ -48,7 +48,7 @@ const projects = {
             },
             "websiteurl": "http://expertece-prototype.store",
             "githuburl": "",
-            "description": "Responsive web application designated to allow users to browse and purchase customized products. Implemented admin dashboard to manage products uploaded, customer database and payments"
+            "description": "Responsive web application designated to allow users to browse and purchase customized products. Implemented admin dashboard to manage products uploaded, customer database, and payments."
         },
         {
             "id": 3,
@@ -80,14 +80,14 @@ const projects = {
             },
             "websiteurl": "https://visage-ai.herokuapp.com/",
             "githuburl": "https://github.com/pixelRena/VisageAi",
-            "description": "Clarifai API to detect faces within an image given"
+            "description": "Clarifai API to detect faces within an image given."
         },
         {
             "id": 5,
             "title": "Tkuisine Seasonings",
             "type": "Commission",
             "client": "",
-            "tools": "Shopify, Liquid,
+            "tools": "Shopify, Liquid",
             "images": {
                 "gif": "",
                 "thumbnail": "",
@@ -96,9 +96,9 @@ const projects = {
             },
             "websiteurl": "https://tkuisineseasoning.store/",
             "githuburl": " ",
-            "description": "E-commerce, Shopify Application to display custom spices and seasonings and buy orders"        
-        },
+            "description": "E-commerce, Shopify Application to display custom spices and seasonings and buy orders."        
+        }
     ]
-}
+};
 
 export default projects;
