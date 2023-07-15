@@ -84,7 +84,7 @@ const projects = {
         },
         {
             "id": 5,
-            "title": "Tkuisine Seasonings",
+            "title": "TKUISINE SEASONINGS",
             "type": "Commission",
             "client": "Tkuisine",
             "tools": "Shopify, Liquid",
