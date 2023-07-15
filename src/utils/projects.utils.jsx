@@ -95,9 +95,9 @@ const projects = {
                 "cover_alt": ""
             },
             "websiteurl": "https://tkuisineseasoning.store/",
-            "githuburl": "",
+            "githuburl": " ",
             "description": "E-commerce, Shopify Application to display custom spices and seasonings and buy orders"        
-        }
+        },
     ]
 }
 
