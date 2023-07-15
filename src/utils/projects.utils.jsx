@@ -82,6 +82,22 @@ const projects = {
             "githuburl": "https://github.com/pixelRena/VisageAi",
             "description": "Clarifai API to detect faces within an image given"
         },
+        {
+            "id": 5,
+            "title": "Tkuisine Seasonings",
+            "type": "Commission",
+            "client": "",
+            "tools": "Shopify, Liquid,
+            "images": {
+                "gif": "",
+                "thumbnail": "",
+                "cover": "",
+                "cover_alt": ""
+            },
+            "websiteurl": "https://tkuisineseasoning.store/",
+            "githuburl": "",
+            "description": "E-commerce, Shopify Application to display custom spices and seasonings and buy orders"        
+        }
     ]
 }
 
