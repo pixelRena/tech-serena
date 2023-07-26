@@ -20,6 +20,22 @@ const projects = {
     "react": [
         {
             "id": 1,
+            "title": "VISAGE AI",
+            "type": "Personal",
+            "client": "",
+            "tools": "React, Express Postgres",
+            "images": {
+                "gif": "",
+                "thumbnail": "",
+                "cover": "",
+                "cover_alt": ""
+            },
+            "websiteurl": "https://visage-ai.herokuapp.com/",
+            "githuburl": "https://github.com/pixelRena/VisageAi",
+            "description": "Clarifai API to detect faces within an image given."
+        },
+        {
+            "id": 2,
             "title": "TRELLO DASHBOARD",
             "type": "Personal",
             "client": "",
@@ -35,7 +51,7 @@ const projects = {
             "description": "A web application to view in-depth information about your Trello boards. Trellometrics is the key to quick and seamless viewing and analyzing the data for your boards on Trello. The application is still in beta and is still being worked on."
         },
         {
-            "id": 2,
+            "id": 3,
             "title": "EXPERTECE COMMERCE",
             "type": "Commission",
             "client": "EXPERTECE",
@@ -51,7 +67,7 @@ const projects = {
             "description": "Responsive web application designated to allow users to browse and purchase customized products. Implemented admin dashboard to manage products uploaded, customer database, and payments."
         },
         {
-            "id": 3,
+            "id": 4,
             "title": "PERSONAL TRAINER",
             "type": "Commission",
             "client": "RTFitness",
@@ -65,22 +81,6 @@ const projects = {
             "websiteurl": "https://redemptiontemplefitness.herokuapp.com/",
             "githuburl": "",
             "description": "A web application to reach new and existing users to promote training services and allows for users to request for more information by submitting a form."
-        },
-        {
-            "id": 4,
-            "title": "VISAGE AI",
-            "type": "Personal",
-            "client": "",
-            "tools": "React, Express Postgres",
-            "images": {
-                "gif": "",
-                "thumbnail": "",
-                "cover": "",
-                "cover_alt": ""
-            },
-            "websiteurl": "https://visage-ai.herokuapp.com/",
-            "githuburl": "https://github.com/pixelRena/VisageAi",
-            "description": "Clarifai API to detect faces within an image given."
         },
         {
             "id": 5,
