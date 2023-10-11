@@ -53,7 +53,7 @@ const projects = {
         {
             "id": 3,
             "title": "EXPERTECE COMMERCE",
-            "type": "Commission",
+            "type": "Other",
             "client": "EXPERTECE",
             "tools": "React, Bootstrap, MongoDB, Express.js, StripeAPI",
             "images": {
