@@ -46,7 +46,7 @@ const projects = {
                 "cover": "../images/trello-beta.jpg",
                 "cover_alt": ""
             },
-            "websiteurl": "https://beta-trello-dashboard.vercel.app/",
+            "websiteurl": "https://beta-trello-dashboard.vercel.app/dashboard",
             "githuburl": "https://github.com/pixelRena/Trello-Dashboard",
             "description": "A web application to view in-depth information about your Trello boards. Trellometrics is the key to quick and seamless viewing and analyzing the data for your boards on Trello. The application is still in beta and is still being worked on."
         },
