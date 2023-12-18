@@ -82,22 +82,6 @@ const projects = {
             "githuburl": "",
             "description": "A web application to reach new and existing users to promote training services and allows for users to request for more information by submitting a form."
         },
-        {
-            "id": 5,
-            "title": "TKUISINE SEASONINGS",
-            "type": "Commission",
-            "client": "Tkuisine",
-            "tools": "Shopify, Liquid",
-            "images": {
-                "gif": "",
-                "thumbnail": "",
-                "cover": "",
-                "cover_alt": ""
-            },
-            "websiteurl": "https://tkuisineseasoning.store/",
-            "githuburl": " ",
-            "description": "E-commerce, Shopify Application to display custom spices and seasonings and buy orders."        
-        }
     ]
 };
 
