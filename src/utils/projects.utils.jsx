@@ -66,22 +66,6 @@ const projects = {
             "githuburl": "",
             "description": "Responsive web application designated to allow users to browse and purchase customized products. Implemented admin dashboard to manage products uploaded, customer database, and payments."
         },
-        {
-            "id": 4,
-            "title": "PERSONAL TRAINER",
-            "type": "Commission",
-            "client": "RTFitness",
-            "tools": "React, AWS, Sass, Bootstrap",
-            "images": {
-                "gif": "",
-                "thumbnail": "../images/rtf-thumbnail.gif",
-                "cover": "../images/rtf.jpg",
-                "cover_alt": ""
-            },
-            "websiteurl": "https://redemptiontemplefitness.herokuapp.com/",
-            "githuburl": "",
-            "description": "A web application to reach new and existing users to promote training services and allows for users to request for more information by submitting a form."
-        },
     ]
 };
 
