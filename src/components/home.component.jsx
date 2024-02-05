@@ -25,7 +25,7 @@ const Home = () => {
     <div id="about">
       <div className="name"><span>.</span>SERENA</div>
       <div className="bio">
-        <div className="title"><span>Design</span>er <span>/</span> <span>Web</span> Developer</div>
+        <div className="title"><span>Web</span> Developer</div>
         <div className="objective">
           I help businesses get more reach by creating designs and bringing them to life while you work on what's most important.
         </div>
