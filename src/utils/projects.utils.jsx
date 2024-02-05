@@ -66,6 +66,18 @@ const projects = {
             "githuburl": "",
             "description": "Responsive web application designated to allow users to browse and purchase customized products. Implemented admin dashboard to manage products uploaded, customer database, and payments."
         },
+        {
+            "id": 4,
+            "title": "REDEMPTION TEMPLE FITNESS",
+            "type": "Commission",
+            "websiteurl:" "https://rtfitness.vercel.app/"
+        },
+        {
+            "id": 5,
+            "title": "ASU Hair",
+            "type": "Commission",
+            "websiteurl:" "https://www.allsewnuphair.com/"
+        }
     ]
 };
 
