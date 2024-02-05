@@ -70,13 +70,33 @@ const projects = {
             "id": 4,
             "title": "REDEMPTION TEMPLE FITNESS",
             "type": "Commission",
-            "websiteurl:" "https://rtfitness.vercel.app/"
+            "websiteurl:" "https://rtfitness.vercel.app/",
+            "client": "",
+            "tools": "React",
+            "images": {
+                "gif": "",
+                "thumbnail": "",
+                "cover_alt": "",
+                "cover": ""
+            },
+            "githuburl": "",
+            "description": ""
         },
         {
             "id": 5,
             "title": "ASU Hair",
             "type": "Commission",
             "websiteurl:" "https://www.allsewnuphair.com/"
+            "client": "",
+            "tools": "React",
+            "images": {
+                "gif": "",
+                "thumbnail": "",
+                "cover_alt": "",
+                "cover": ""
+            },
+            "githuburl": "",
+            "description": ""
         },
     ]
 };
