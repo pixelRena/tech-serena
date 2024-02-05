@@ -77,7 +77,7 @@ const projects = {
             "title": "ASU Hair",
             "type": "Commission",
             "websiteurl:" "https://www.allsewnuphair.com/"
-        }
+        },
     ]
 };
 
