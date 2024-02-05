@@ -1,104 +1,108 @@
 const projects = {
-    "html": [
-        {
-            "id": 2,
-            "title": "GAMING SUGGESTIONS",
-            "type": "Commission",
-            "client": "SnuyGames",
-            "tools": "HTML, Sass, Firebase, Express.js, SteamAPI, RAWGAPI",
-            "images": {
-                "gif": "../images/snuy-cover.gif",
-                "thumbnail": "../images/snuy-thumbnail.gif",
-                "cover": "../images/snuy-cover.gif",
-                "cover_alt": "https://devserena.herokuapp.com/images/recommend2.jpg"
-            },
-            "websiteurl": "http://nuygames.xyz/",
-            "githuburl": "https://github.com/pixelRena/games-recommendations",
-            "description": "Responsive web application that allows users and followers of twitch streamer to submit their suggest games to play next. The games are displayed using Steam API for owned games and RAWG API for video game database."
-        }
-    ],
-    "react": [
-        {
-            "id": 1,
-            "title": "VISAGE AI",
-            "type": "Personal",
-            "client": "",
-            "tools": "React, Express Postgres",
-            "images": {
-                "gif": "",
-                "thumbnail": "",
-                "cover": "",
-                "cover_alt": ""
-            },
-            "websiteurl": "https://visage-ai.herokuapp.com/",
-            "githuburl": "https://github.com/pixelRena/VisageAi",
-            "description": "Clarifai API to detect faces within an image given."
-        },
-        {
-            "id": 2,
-            "title": "TRELLO DASHBOARD",
-            "type": "Personal",
-            "client": "",
-            "tools": "React, Next.js, TailwindCSS, TrelloAPI",
-            "images": {
-                "gif": "",
-                "thumbnail": "../images/trello-beta.jpg",
-                "cover": "../images/trello-beta.jpg",
-                "cover_alt": ""
-            },
-            "websiteurl": "https://beta-trello-dashboard.vercel.app/dashboard",
-            "githuburl": "https://github.com/pixelRena/Trello-Dashboard",
-            "description": "A web application to view in-depth information about your Trello boards. Trellometrics is the key to quick and seamless viewing and analyzing the data for your boards on Trello. The application is still in beta and is still being worked on."
-        },
-        {
-            "id": 3,
-            "title": "EXPERTECE COMMERCE",
-            "type": "Other",
-            "client": "EXPERTECE",
-            "tools": "React, Bootstrap, MongoDB, Express.js, StripeAPI",
-            "images": {
-                "gif": "",
-                "thumbnail": "../images/expertece-thumbnail.gif",
-                "cover_alt": "https://res.cloudinary.com/dyqefy6t8/image/upload/v1665823921/ubsizpsqpqkyymxa23r6.jpg",
-                "cover": "../images/expertece.jpg"
-            },
-            "websiteurl": "http://expertece-prototype.store",
-            "githuburl": "",
-            "description": "Responsive web application designated to allow users to browse and purchase customized products. Implemented admin dashboard to manage products uploaded, customer database, and payments."
-        },
-        {
-            "id": 4,
-            "title": "REDEMPTION TEMPLE FITNESS",
-            "type": "Commission",
-            "websiteurl:" "https://rtfitness.vercel.app/",
-            "client": "",
-            "tools": "React",
-            "images": {
-                "gif": "",
-                "thumbnail": "",
-                "cover_alt": "",
-                "cover": ""
-            },
-            "githuburl": "",
-            "description": ""
-        },
-        {
-            "id": 5,
-            "title": "ASU Hair",
-            "type": "Commission",
-            "websiteurl:" "https://www.allsewnuphair.com/"
-            "client": "",
-            "tools": "React",
-            "images": {
-                "gif": "",
-                "thumbnail": "",
-                "cover_alt": "",
-                "cover": ""
-            },
-            "githuburl": "",
-            "description": ""
-        },
-    ]
-};
+  html: [
+    {
+      id: 2,
+      title: "GAMING SUGGESTIONS",
+      type: "Commission",
+      client: "SnuyGames",
+      tools: "HTML, Sass, Firebase, Express.js, SteamAPI, RAWGAPI",
+      images: {
+        gif: "../images/snuy-cover.gif",
+        thumbnail: "../images/snuy-thumbnail.gif",
+        cover: "../images/snuy-cover.gif",
+        cover_alt: "https://devserena.herokuapp.com/images/recommend2.jpg",
+      },
+      websiteurl: "http://nuygames.xyz/",
+      githuburl: "https://github.com/pixelRena/games-recommendations",
+      description:
+        "Responsive web application that allows users and followers of twitch streamer to submit their suggest games to play next. The games are displayed using Steam API for owned games and RAWG API for video game database.",
+    },
+  ],
+  react: [
+    {
+      id: 1,
+      title: "VISAGE AI",
+      type: "Personal",
+      client: "",
+      tools: "React, Express Postgres",
+      images: {
+        gif: "",
+        thumbnail: "",
+        cover: "",
+        cover_alt: "",
+      },
+      websiteurl: "https://visage-ai.herokuapp.com/",
+      githuburl: "https://github.com/pixelRena/VisageAi",
+      description: "Clarifai API to detect faces within an image given.",
+    },
+    {
+      id: 2,
+      title: "TRELLO DASHBOARD",
+      type: "Personal",
+      client: "",
+      tools: "React, Next.js, TailwindCSS, TrelloAPI",
+      images: {
+        gif: "",
+        thumbnail: "../images/trello-beta.jpg",
+        cover: "../images/trello-beta.jpg",
+        cover_alt: "",
+      },
+      websiteurl: "https://beta-trello-dashboard.vercel.app/dashboard",
+      githuburl: "https://github.com/pixelRena/Trello-Dashboard",
+      description:
+        "A web application to view in-depth information about your Trello boards. Trellometrics is the key to quick and seamless viewing and analyzing the data for your boards on Trello. The application is still in beta and is still being worked on.",
+    },
+    {
+      id: 3,
+      title: "EXPERTECE COMMERCE",
+      type: "Other",
+      client: "EXPERTECE",
+      tools: "React, Bootstrap, MongoDB, Express.js, StripeAPI",
+      images: {
+        gif: "",
+        thumbnail: "../images/expertece-thumbnail.gif",
+        cover_alt:
+          "https://res.cloudinary.com/dyqefy6t8/image/upload/v1665823921/ubsizpsqpqkyymxa23r6.jpg",
+        cover: "../images/expertece.jpg",
+      },
+      websiteurl: "http://expertece-prototype.store",
+      githuburl: "",
+      description:
+        "Responsive web application designated to allow users to browse and purchase customized products. Implemented admin dashboard to manage products uploaded, customer database, and payments.",
+    },
+    {
+      id: 4,
+      title: "REDEMPTION TEMPLE FITNESS",
+      type: "Commission",
+      websiteurl: "https://rtfitness.vercel.app/",
+      client: "",
+      tools: "React",
+      images: {
+        gif: "",
+        thumbnail: "",
+        cover_alt: "",
+        cover: "",
+      },
+      githuburl: "",
+      description: "",
+    },
+    {
+      id: 5,
+      title: "ASU Hair",
+      type: "Commission",
+      websiteurl: "https://www.allsewnuphair.com/",
+      client: "",
+      tools: "React",
+      images: {
+        gif: "",
+        thumbnail: "",
+        cover_alt: "",
+        cover: "",
+      },
+      githuburl: "",
+      description: "",
+    },
+  ],
+}
 
-export default projects;
+export default projects
