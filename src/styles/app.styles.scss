@@ -1,327 +1,386 @@
-@import 'variables.styles';
+@import "variables.styles";
 
 * {
-    margin: 10px;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 10px;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 a {
-    text-decoration: none;
-    @include themed() { color: t('primaryLight'); }
-    &:hover {
-        color: $secondaryLight;
-        text-decoration: underline;
-    }
+  text-decoration: none;
+  @include themed() {
+    color: t("primaryLight");
+  }
+  &:hover {
+    color: $secondaryLight;
+    text-decoration: underline;
+  }
 }
 
-::-webkit-scrollbar { 
-    width: 7px; 
-    height: 6px;
+::-webkit-scrollbar {
+  width: 7px;
+  height: 6px;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-    background: rgba(0,0,0,0); 
+  background: rgba(0, 0, 0, 0);
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    border-radius: 100px;
-    @include themed() { background: t('primaryDark'); }
+  border-radius: 100px;
+  @include themed() {
+    background: t("primaryDark");
+  }
 }
 
 /* Handle on hover */
-::-webkit-scrollbar-thumb:hover { background: #7342FF; }
-
-button { cursor: pointer; }
-
-span { margin: 0; }
-
-.external-icon { 
-    vertical-align: middle;
-    color: $secondaryLight; 
-}
-  
-.text-info { 
-    font-family: $secondaryFont;
-    font-size: 20px;
-    text-align: center;
-    @include themed() { color: t('primaryLight'); }
-    margin: 15px 0;
+::-webkit-scrollbar-thumb:hover {
+  background: #7342ff;
 }
 
-body { 
-    @include themed() { background: t('backgroundColor'); }
+button {
+  cursor: pointer;
 }
-  
+
+span {
+  margin: 0;
+}
+
+.external-icon {
+  vertical-align: middle;
+  color: $secondaryLight;
+}
+
+.text-info {
+  font-family: $secondaryFont;
+  font-size: 20px;
+  text-align: center;
+  @include themed() {
+    color: t("primaryLight");
+  }
+  margin: 15px 0;
+}
+
+body {
+  @include themed() {
+    background: t("backgroundColor");
+  }
+}
+
 .container {
-    position: relative;
-    padding: 20px;
-    height: 95vh;
+  position: relative;
+  padding: 20px;
+  height: 95vh;
 
-    &::before {
-        content: "COPYRIGHT 2023";
+  &::before {
+    content: "© 2023-2026";
+    font-family: $secondaryFont;
+    @include themed() {
+      color: t("primaryDark");
+    }
+    rotate: 90deg;
+    position: absolute;
+    overflow: hidden;
+    right: -75px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .theme-container {
+    * {
+      display: inline-block;
+    }
+    width: 250px;
+    .theme-icon {
+      @include themed() {
+        color: $secondaryLight;
+      }
+      vertical-align: middle;
+    }
+    .theme-toggler {
+      text-align: left;
+      margin: 0;
+      width: 250px;
+      @include themed() {
+        color: t("primaryDark");
+        border-top: 1px solid t("primaryDark");
+      }
+      font-family: $secondaryFont;
+      font-size: 24px;
+      background-color: rgba(0, 0, 0, 0);
+      background-size: 100% 0%;
+      background-repeat: no-repeat;
+      transition: 0.4s;
+      border: 0;
+      &:hover {
+        @include themed() {
+          color: t("primaryLight");
+          background-image: linear-gradient(t("primaryDark"), t("primaryDark"));
+        }
+        background-size: 100% 100%;
+      }
+    }
+    .social-icons {
+      position: absolute;
+      padding: 0;
+      margin: 0;
+      right: 0;
+      a {
+        padding: 0;
+        margin: 0;
+        @include themed() {
+          color: t("primaryDark");
+        }
+        &:hover {
+          opacity: 0.7;
+        }
+      }
+    }
+  }
+
+  #about-container {
+    display: flex;
+    height: 90%;
+    #about {
+      top: 0;
+      position: relative;
+      z-index: 55;
+      width: 100%;
+      margin-right: 40px;
+      * {
+        letter-spacing: 2px;
+      }
+      .name {
+        span {
+          color: $secondaryLight;
+        }
+        @include themed() {
+          color: t("primaryDark");
+        }
+        color: $primaryLight;
+        font-family: $primaryFont;
+        font-size: 64px;
+        font-weight: bold;
+      }
+
+      .bio {
         font-family: $secondaryFont;
-        @include themed() { color: t('primaryDark'); }
-        rotate: 90deg;
-        position: absolute;
-        overflow: hidden;
-        right: -75px;
-        top: 50%;
-        transform: translateY(-50%);
-    }
-
-    .theme-container {
-        * { display: inline-block; }
-        width: 250px;
-        .theme-icon { 
-            @include themed() { color: $secondaryLight; }
-            vertical-align: middle; 
+        @include themed() {
+          color: t("primaryDark");
         }
-        .theme-toggler {
-            text-align: left;
-            margin:0;
-            width: 250px;   
-            @include themed() { 
-                color: t('primaryDark'); 
-                border-top: 1px solid t('primaryDark');
-            }
-            font-family: $secondaryFont;
-            font-size: 24px;
-            background-color: rgba(0,0,0,0);
-            background-size: 100% 0%;
-            background-repeat: no-repeat;
-            transition: .4s;
-            border: 0;
-            &:hover {
-                @include themed() {  
-                    color: t('primaryLight');
-                    background-image: linear-gradient(t('primaryDark'), t('primaryDark')); 
-                }
-                background-size: 100% 100%;
-            }
-        }
-        .social-icons {
-            position: absolute;
-            padding: 0;
-            margin: 0;
-            right: 0;
-            a {
-                padding: 0;
-                margin: 0;
-                @include themed() { color: t('primaryDark'); }
-                &:hover {
-                    opacity: 0.7;
-                }
-            }
-        }
-    }
-
-    #about-container {
-        display: flex;
-        height: 90%;
-        #about {
-            top: 0;
-            position: relative;
-            z-index: 55;
-            width: 100%;
-            margin-right: 40px;
-            * { letter-spacing: 2px; }
-            .name {
-                span { color: $secondaryLight; }
-                @include themed() { color: t('primaryDark'); }
-                color: $primaryLight;
-                font-family: $primaryFont;
-                font-size: 64px;
-                font-weight: bold;
-            }
-    
-            .bio {
-                font-family: $secondaryFont;
-                @include themed() { color: t('primaryDark'); }
-                width: 100%;
-                .title {  
-                    white-space: nowrap;
-                    font-size: 36px;
-                    font-weight: bold;
-                    span {
-                        color: $secondaryLight; 
-                    }
-                }
-                .objective {
-                    font-size: 24px;
-                    word-break: break-word;
-                    span { 
-                        display: block;
-                        margin: 55px 0 55px; 
-                    }
-                }
-            }
-        }
-        #email-btn {
-            font-family: $secondaryFont;
-            z-index: 60;
-            text-decoration: none;
-            position: absolute;
-            color: $primaryLight;
-            transform: translateX(-50%);
-            left: 50%;
-            bottom: 35px;
-            border-radius: 9999px;
-            border: 2px solid;
-            @include themed() { 
-                border-color: t('primaryDark'); 
-                background-color: t('emailBg');
-            }
-            padding: 12px;
-            &:hover { opacity: 0.5; }
-        }
-    }
-
-
-   .project-container {
-        font-family: $secondaryFont;
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
-        background-color: rgba(255,255,255,0.5);
-        backdrop-filter: blur(10px);
-        width: 880px;
-        height: 80%;
-        border-top: 8px solid $secondaryLight;
-        .project-image {
-            width: 600px;
-            height: 400px;
-            background-position: center;
-            background-size: contain;
-            background-repeat: no-repeat;
-        }
-        .project-information {
-            width: 40%;
-            margin: auto;
-            span { 
-                color: $secondaryLight; 
-                text-decoration: underline;
-            }
-        }
-        .project-title { 
+        width: 100%;
+        .title {
+          white-space: nowrap;
+          font-size: 36px;
+          font-weight: bold;
+          span {
             color: $secondaryLight;
-            font-family: $primaryFont;
+          }
         }
-        .project-links {
-            display: flex;
-            justify-content: space-between;
-            a {
-                color: $secondaryLight;
-            }
+        .objective {
+          font-size: 24px;
+          word-break: break-word;
+          span {
+            display: block;
+            margin: 55px 0 55px;
+          }
         }
-   } 
+      }
+    }
+    #email-btn {
+      font-family: $secondaryFont;
+      z-index: 60;
+      text-decoration: none;
+      position: absolute;
+      color: $primaryLight;
+      transform: translateX(-50%);
+      left: 50%;
+      bottom: 35px;
+      border-radius: 9999px;
+      border: 2px solid;
+      @include themed() {
+        border-color: t("primaryDark");
+        background-color: t("emailBg");
+      }
+      padding: 12px;
+      &:hover {
+        opacity: 0.5;
+      }
+    }
+  }
 
-   .projects-list {
-        @include themed() { color: t('primaryDark'); }
-        font-family: $secondaryFont;
-        display: flex;
-        flex-direction: column;
-        align-self: flex-end;
-        position: relative;
-        text-align: right;
-        bottom: 0;
-        z-index: 100;
-        width: 70%;
-       .projects-list-title {
-            text-decoration: none;
-            @include themed() { color: t('primaryDark'); }
-            font-size: 20px;
-            cursor: pointer;
-            padding-bottom: 10px;
-            background-color: transparent;
-            .selected { @include themed() { background-color: t('primaryDark'); }}
-            .projects-list-type {
-                font-size: 15px;
-            }
-            .projects-list-bullet {
-                margin-left: 5px;
-                display: inline-block;
-                @include themed() { border: 4px solid t('primaryDark'); }
-                width: 15px;
-                height: 15px;
-            } 
-            .projects-list-thumbnail {
-                background-position: center;
-                background-size: cover;
-                height: 150px;
-                width: 100%;
-                box-shadow: 5px 5px $secondaryLight;
-            }
-            &:hover { opacity: 0.5; }
-       } 
-   }
+  .project-container {
+    font-family: $secondaryFont;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(10px);
+    width: 880px;
+    height: 80%;
+    border-top: 8px solid $secondaryLight;
+    .project-image {
+      width: 600px;
+      height: 400px;
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+    .project-information {
+      width: 40%;
+      margin: auto;
+      span {
+        color: $secondaryLight;
+        text-decoration: underline;
+      }
+    }
+    .project-title {
+      color: $secondaryLight;
+      font-family: $primaryFont;
+    }
+    .project-links {
+      display: flex;
+      justify-content: space-between;
+      a {
+        color: $secondaryLight;
+      }
+    }
+  }
+
+  .projects-list {
+    @include themed() {
+      color: t("primaryDark");
+    }
+    font-family: $secondaryFont;
+    display: flex;
+    flex-direction: column;
+    align-self: flex-end;
+    position: relative;
+    text-align: right;
+    bottom: 0;
+    z-index: 100;
+    width: 70%;
+    .projects-list-title {
+      text-decoration: none;
+      @include themed() {
+        color: t("primaryDark");
+      }
+      font-size: 20px;
+      cursor: pointer;
+      padding-bottom: 10px;
+      background-color: transparent;
+      .selected {
+        @include themed() {
+          background-color: t("primaryDark");
+        }
+      }
+      .projects-list-type {
+        font-size: 15px;
+      }
+      .projects-list-bullet {
+        margin-left: 5px;
+        display: inline-block;
+        @include themed() {
+          border: 4px solid t("primaryDark");
+        }
+        width: 15px;
+        height: 15px;
+      }
+      .projects-list-thumbnail {
+        background-position: center;
+        background-size: cover;
+        height: 150px;
+        width: 100%;
+        box-shadow: 5px 5px $secondaryLight;
+      }
+      &:hover {
+        opacity: 0.5;
+      }
+    }
+  }
 }
 
- @media (max-width: 767px) {
-    * { margin: 0; }
-   body {
+@media (max-width: 767px) {
+  * {
+    margin: 0;
+  }
+  body {
     margin: 10px;
     &::before,
     &::after {
-        display: none;
+      display: none;
     }
-   }
+  }
 
-   .container {
-    * { margin: 5px 0;}
-        &::before { display: none; }
-        #about-container {
-            flex-wrap: wrap;
-            flex-direction: column;
-            height: 100%;
-            
-            #email-btn { 
-                position: relative;
-                bottom: 0;
-                width: 60%;
-            }
-            #about {  
-                margin-right: 0;
-                text-align: center;
-                .name { font-size: 40px; }
-                .bio { 
-                    width: 100%; 
-                    .title { font-size: 20px; }
-                    .objective { 
-                        font-size: 18px; 
-                        span { text-align: center; }
-                    }
-                }   
-            }
-        }
-        .projects-list {
-            text-align: center;
-            display: flex;
-            justify-content: flex-end;
-            width: 100%;
-            margin: 0;
-            height: 50%;
-            .projects-list-title {
-                font-size: 19px;
-                .projects-list-bullet {
-                    display: none;
-                }
-            }
-            .projects-list-type {
-                font-size: 15px;
-            }
-        }
+  .container {
+    * {
+      margin: 5px 0;
+    }
+    &::before {
+      display: none;
+    }
+    #about-container {
+      flex-wrap: wrap;
+      flex-direction: column;
+      height: 100%;
 
-        .theme-container { 
-            width: 100%; 
-            text-align: center;
-            .theme-toggler { text-align: center; } 
-            .social-icons {
-                position: relative;
-                a { padding: 10px 10px 0 10px; }
-            }
+      #email-btn {
+        position: relative;
+        bottom: 0;
+        width: 60%;
+      }
+      #about {
+        margin-right: 0;
+        text-align: center;
+        .name {
+          font-size: 40px;
         }
-   }
+        .bio {
+          width: 100%;
+          .title {
+            font-size: 20px;
+          }
+          .objective {
+            font-size: 18px;
+            span {
+              text-align: center;
+            }
+          }
+        }
+      }
+    }
+    .projects-list {
+      text-align: center;
+      display: flex;
+      justify-content: flex-end;
+      width: 100%;
+      margin: 0;
+      height: 50%;
+      .projects-list-title {
+        font-size: 19px;
+        .projects-list-bullet {
+          display: none;
+        }
+      }
+      .projects-list-type {
+        font-size: 15px;
+      }
+    }
+
+    .theme-container {
+      width: 100%;
+      text-align: center;
+      .theme-toggler {
+        text-align: center;
+      }
+      .social-icons {
+        position: relative;
+        a {
+          padding: 10px 10px 0 10px;
+        }
+      }
+    }
+  }
 }
