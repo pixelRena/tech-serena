@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/tech-serena/static/css/main.adf79895.css",
+    "main.js": "/tech-serena/static/js/main.09babf67.js",
+    "static/js/787.a2dcda44.chunk.js": "/tech-serena/static/js/787.a2dcda44.chunk.js",
+    "index.html": "/tech-serena/index.html",
+    "main.adf79895.css.map": "/tech-serena/static/css/main.adf79895.css.map",
+    "main.09babf67.js.map": "/tech-serena/static/js/main.09babf67.js.map",
+    "787.a2dcda44.chunk.js.map": "/tech-serena/static/js/787.a2dcda44.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.adf79895.css",
+    "static/js/main.09babf67.js"
+  ]
+}
